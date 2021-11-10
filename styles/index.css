@@ -1,10 +1,14 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-article a {
-    color: rgb(49, 49, 182);
-    text-decoration: underline;
-}
-/* purgecss end ignore */
 @tailwind utilities;
 
+* {
+    padding: 0;
+    font-weight: normal;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0;
+  }

@@ -1,8 +1,15 @@
 {
   "name": "cms-sanity",
   "version": "1.0.0",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "private": true,
+  "packages": [
+    "studio/*"
+  ],
   "scripts": {
     "dev": "next",
+    "begin": "lerna run dev",
     "build": "npm run build:sanity && pwd && npm run build:web",
     "build:web": "next build",
     "start:web": "next start",
@@ -13,7 +20,7 @@
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.8.0",
-    "@sanity/image-url": "^0.140.19",
+    "@sanity/image-url": "^1.0.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.15.0",
     "next": "^10.2.0",
