@@ -6,6 +6,9 @@
 	"main": "package.json",
 	"author": "Knut Melvær <knut@sanity.io>",
 	"license": "UNLICENSED",
+	"scripts": {
+		"begin": "sanity start"
+	},
 	"keywords": [
 		"sanity"
 	],
