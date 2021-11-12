@@ -91,6 +91,12 @@
 .header nav ul li a:hover::before {
   transform: scale(1, 1);
 }
+.header nav ul li .highlight {
+  color: #131313;
+}
+.header nav ul li .highlight:before {
+  transform: scale(1, 1);
+}
 
 @media screen and (max-width: 900px) {
   .header h1 {
@@ -124,6 +130,7 @@
   .header nav ul i {
     padding: 10px 0 5px 0;
     display: block;
+    cursor: pointer;
   }
   .header nav ul li {
     padding: 10px;

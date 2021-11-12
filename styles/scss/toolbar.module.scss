@@ -53,8 +53,6 @@
     z-index: 999;
     width: 100%;
 
-    // p {display: none;}
-
     h1 {
         color: #fff;
         font-size: 2rem;
@@ -78,7 +76,6 @@
 
             i{
                 display: none;
-                // background-color: red;
             }
 
             li {
@@ -105,8 +102,13 @@
                             transform: scale(1, 1);
                         }
                     }
+                }
 
-                    
+                .highlight {
+                    color: $accentColor;
+                    &:before {
+                        transform: scale(1, 1);
+                    }
                 }
             }
         }
@@ -156,11 +158,11 @@
                 i {
                     padding: 10px 0 5px 0;
                     display: block;
+                    cursor: pointer;
                 }
                 
                 li {
                     a {
-
                         opacity: 1;
                         &:hover {
                             color: $accentColor;
@@ -211,3 +213,4 @@
 
     }
 }
+

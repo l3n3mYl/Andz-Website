@@ -1,15 +1,12 @@
-import { getAllPostsForHome, getAuthorInfo, getImageCarousel, getAllProjects } from '../lib/api'
-import styles from '../styles/css/main.module.css'
-import Head from 'next/head'
 import React, { useEffect } from 'react'
-import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
-import imageUrlBuilder from '@sanity/image-url'
 import Layout from '../components/Layout'
+import imageUrlBuilder from '@sanity/image-url'
+import styles from '../styles/css/main.module.css'
+import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
+import { getAuthorInfo, getImageCarousel, getAllProjects } from '../lib/api'
 
 export default function Index({ carouselItems, author, projects }) {
   const carousel = carouselItems[0].images
-
-  console.log(projects)
 
   const imgUrlBuilder = imageUrlBuilder({
     projectId: PROJECT_ID,
@@ -19,15 +16,16 @@ export default function Index({ carouselItems, author, projects }) {
   var counter = 1;
 
   useEffect(() => {
-    setInterval(() => {
-      document.getElementById('radio'+counter).checked = true;
-      counter++;
-      
-      if(counter > 5) {
-          counter = 1;
-      }
-    }, 5000);
-
+    if(document) {
+      setInterval(() => {
+        document.getElementById('radio'+counter).checked = true;
+        counter++;
+        
+        if(counter > 5) {
+            counter = 1;
+        }
+      }, 5000);
+    }
   }, [])
 
   return (

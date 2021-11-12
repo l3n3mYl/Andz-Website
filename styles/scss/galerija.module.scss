@@ -1,0 +1,58 @@
+.projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    padding: 100px;
+
+    .imageHover {
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            img {
+                background-color: rgba($color: #fff, $alpha: 1);
+                transform: scale(1.1);
+                filter: opacity(60%);
+                transition: 0.8s;
+            }
+        }
+    }
+
+    .singleProject {
+        &:nth-child(odd) {
+            place-self: center end;
+        }
+        &:nth-child(even) {
+            place-self: center start;
+        }
+    }
+}
+
+.projectInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1em;
+        color: darkgray;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .projectsGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+}
