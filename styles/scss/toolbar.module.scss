@@ -47,13 +47,13 @@
 }
 
 .header {
-    background-color: rgba($color: #fff, $alpha: 0.13);
+    background-color: rgba($color: $elementColor, $alpha: 0.5);
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
 
-    p {display: none;}
+    // p {display: none;}
 
     h1 {
         color: #fff;
@@ -66,7 +66,7 @@
         top: 100%;
         width: 100%;
         left: 0;
-        background-color: rgba($color: #fff, $alpha: 0.13);
+        background-color: rgba($color: $elementColor, $alpha: 0.5);
         transform: scale(1, 0);
         transform-origin: top;
         transition: transform 400ms ease-in-out;
@@ -75,6 +75,11 @@
             margin: 0;
             padding: 0;
             list-style: none;
+
+            i{
+                display: none;
+                // background-color: red;
+            }
 
             li {
                 margin-bottom: 1em;
@@ -110,16 +115,19 @@
 
 @media screen and (max-width: 900px) {
     .header {
-        // .bigLogo {
-        //     // font-size: 1.5em;
-        //     width: 3000px;
-        // }
-        nav ul li {
+        h1{
+            padding-top: 20px;
+            display: block;
+        }
+        nav ul {
+
+            li {
             
-                    a {
-                        font-size: 0.8em;
-                    }
-            
+                a {
+                    font-size: 1em;
+                }
+        
+            }
         }
     }
 }
@@ -132,11 +140,6 @@
     .header {
         width: 70%;
         margin-left: 16%;
-
-
-        // .smallLogo {
-        //     grid-column: 4/ span 1;
-        // }
 
         h1 {
             display: none;
@@ -151,11 +154,8 @@
                 grid-template-columns: 0.5fr repeat(5, minmax(10px, 1fr)) 0.5fr;
 
                 i {
-                    // display: block;
-                    // width: 3000px;
-                    // grid-column: 4/ 5;
-                    // color: #fff;
-                    // font-size: 2rem;
+                    padding: 10px 0 5px 0;
+                    display: block;
                 }
                 
                 li {
