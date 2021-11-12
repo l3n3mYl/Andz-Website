@@ -1,0 +1,51 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 100px;
+}
+.projectsGrid .imageHover {
+  overflow: hidden;
+  cursor: pointer;
+}
+.projectsGrid .imageHover:hover img {
+  background-color: white;
+  transform: scale(1.1);
+  filter: opacity(60%);
+  transition: 0.8s;
+}
+.projectsGrid .singleProject:nth-child(odd) {
+  place-self: center end;
+}
+.projectsGrid .singleProject:nth-child(even) {
+  place-self: center start;
+}
+
+.projectInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.projectInfo h2 {
+  font-size: 1.5rem;
+}
+.projectInfo h3 {
+  font-size: 1em;
+  color: darkgray;
+}
+
+@media screen and (max-width: 799px) {
+  .projectsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectsGrid h3 {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=galerija.module.css.map */
