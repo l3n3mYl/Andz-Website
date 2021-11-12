@@ -2,7 +2,7 @@ import Toolbar from './Toolbar'
 import Footer from './Footer'
 import Head from 'next/head'
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, author }) => {
 
 
     return (
@@ -12,7 +12,7 @@ const Layout = ({ children, title }) => {
             </Head>
             <Toolbar title={title} />
             {children}
-            <Footer />
+            <Footer author={author} />
         </>
     )
 }

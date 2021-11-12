@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 * {
     padding: 0;
-    font-weight: normal;
+    font-weight: lighter;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Rubik';
   }
   
   ::-webkit-scrollbar {
