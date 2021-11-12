@@ -149,4 +149,16 @@
   color: darkgray;
 }
 
+@media screen and (max-width: 799px) {
+  .projectsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectsGrid h3 {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=main.module.css.map */
