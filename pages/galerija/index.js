@@ -19,7 +19,7 @@ const Galerija = ({ author, projects }) => {
                 <div className={styles.singleProject} key={i}>
                   <div className={styles.imageHover}>
                     <div className={styles.projectImg}>
-                      <img src={imgUrlBuilder.image(project.mainImage).width(500).height(300)} alt="" />
+                      <img src={imgUrlBuilder.image(project.mainImage).width(1920).height(1080)} alt="" />
                     </div>
                   </div>
                   <div className={styles.projectInfo}>

@@ -1,8 +1,10 @@
 .projectsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
-  padding: 100px;
+  grid-gap: 5%;
+  margin: auto;
+  width: 50vw;
+  padding: 100px 0px 200px 0px;
 }
 .projectsGrid .imageHover {
   overflow: hidden;
@@ -36,15 +38,63 @@
   color: darkgray;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 1030px) {
+  .singleProject {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .projectsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 200px 0;
+  }
+  .projectsGrid .imageHover {
+    width: 50vw !important;
+  }
+  .projectsGrid h2 {
+    font-size: 2em;
+  }
+  .projectsGrid h3 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .projectsGrid {
+    padding: 100px 30% !important;
+  }
+  .projectsGrid .imageHover {
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 850px) {
   .projectsGrid {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .projectsGrid h3 {
-    text-align: center;
+  .projectsGrid .imageHover {
+    width: 100vw !important;
+  }
+
+  .singleProject {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .singleProject img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .projectsGrid {
+    margin: 0px 20% !important;
+  }
+  .projectsGrid .imageHover {
+    width: 30vw;
   }
 }
 
