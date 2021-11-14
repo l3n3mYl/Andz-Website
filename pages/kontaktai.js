@@ -1,44 +1,68 @@
 import Layout from '../components/Layout'
-import imageUrlBuilder from '@sanity/image-url'
-import styles from '../styles/css/galerija.module.css'
-import { getAuthorInfo, getAllProjects } from '../lib/api'
-import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
+import styles from '../styles/css/kontaktai.module.css'
+import { getAuthorInfo } from '../lib/api'
 
-const Kontaktai = ({ author, projects }) => {
+const Kontaktai = ({ author }) => {
 
-    const imgUrlBuilder = imageUrlBuilder({
-        projectId: PROJECT_ID,
-        dataset: PROJECT_DATASET
-    })
+  const emailField = `https://formsubmit.co/${author[0].email}`
 
-    return (
-        <Layout title="Kontaktai" author={author}>
-            <div className={styles.projectsGrid}>
-            {projects.map((project, i) => {
-              return (
-                <div className={styles.singleProject} key={i}>
-                  <div className={styles.imageHover}>
-                    <div className={styles.projectImg}>
-                      <img src={imgUrlBuilder.image(project.mainImage).width(500).height(300)} alt="" />
+  return (
+    <Layout author={author} title='Kontaktai'>
+      <div className={styles.content}>
+        <div className={styles.body}>
+          <form action={emailField} method='POST' className={styles.form}>
+            <input type="hidden" name="_captcha" value="false"/>
+            <h2>Susisiekime!</h2>
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <div className={styles.inputBox}>
+                        <input type="text" name="name" required="required"/>
+                        <span className={styles.text}>Vardas</span>
+                        <span className={styles.line}></span>
                     </div>
-                  </div>
-                  <div className={styles.projectInfo}>
-                    <h2>{project.title}</h2>
-                    <h3>{project.subtitle}</h3>
-                  </div>
                 </div>
-              )
-            })}
-          </div>
-        </Layout>
-    )
+                <div className={styles.col}>
+                    <div className={styles.inputBox}>
+                        <input type="text" name="email" required="required"/>
+                        <span className={styles.text}>Email Adresas</span>
+                        <span className={styles.line}></span>
+                    </div>
+                </div>
+            </ div>
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <div className={styles.inputBox}>
+                        <input type="text" name="_subject" required="required"/>
+                        <span className={styles.text}>Tema</span>
+                        <span className={styles.line}></span>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <div className={styles.inputBox} id={styles.textArea}>
+                        <textarea type="text" name="message" required="required"/>
+                        <span className={styles.text}>Žinutė</span>
+                        <span className={styles.line}></span>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <input type="submit" value="Siųsti"/>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
 export async function getStaticProps() {
     const author = await getAuthorInfo()
-    const projects = await getAllProjects()
     return {
-      props: { author, projects },
+      props: { author },
       revalidate: 1
     }
 }
