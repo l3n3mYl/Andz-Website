@@ -3,9 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Toolbar = ({ title }) => {
-
-    console.log(title)
-
     return (
         <header className={styles.header}>
             <h1 className={styles.smallLogo}><Image src='/logo.png' width={75} height={60} /></h1>

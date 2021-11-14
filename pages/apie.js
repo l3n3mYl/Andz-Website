@@ -1,44 +1,49 @@
 import Layout from '../components/Layout'
 import imageUrlBuilder from '@sanity/image-url'
-import styles from '../styles/css/galerija.module.css'
-import { getAuthorInfo, getAllProjects } from '../lib/api'
+import styles from '../styles/css/apie.module.css'
+import { getAuthorInfo } from '../lib/api'
 import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
+import SanityBlockContent from '@sanity/block-content-to-react'
+import client from '../lib/sanity'
 
-const Apie = ({ author, projects }) => {
+const Apie = ({ author }) => {
+  let smh = author[0].bio
 
-    const imgUrlBuilder = imageUrlBuilder({
-        projectId: PROJECT_ID,
-        dataset: PROJECT_DATASET
-    })
+  const imgUrlBuilder = imageUrlBuilder({
+      projectId: PROJECT_ID,
+      dataset: PROJECT_DATASET
+  })
 
-    return (
-        <Layout title="Apie" author={author}>
-            <div className={styles.projectsGrid}>
-            {projects.map((project, i) => {
-              return (
-                <div className={styles.singleProject} key={i}>
-                  <div className={styles.imageHover}>
-                    <div className={styles.projectImg}>
-                      <img src={imgUrlBuilder.image(project.mainImage).width(500).height(300)} alt="" />
-                    </div>
-                  </div>
-                  <div className={styles.projectInfo}>
-                    <h2>{project.title}</h2>
-                    <h3>{project.subtitle}</h3>
-                  </div>
-                </div>
-              )
-            })}
+  const serializers = {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  }
+
+  return (
+      <Layout title="Apie" author={author}>
+        <div className={styles.innerDiv}>
+          <div className={styles.authorInfo}>
+            <div className={styles.authorImg}>
+              <img src={imgUrlBuilder.image(author[0].image)} alt="" />
+            </div>
+            <div className={styles.authorBio}>
+              <SanityBlockContent blocks={smh} serializers={serializers} imageOptions={{fit: 'max'}} {...client.config()}/>
+            </div>
           </div>
-        </Layout>
-    )
+        </div>
+      </Layout>
+  )
 }
 
 export async function getStaticProps() {
     const author = await getAuthorInfo()
-    const projects = await getAllProjects()
     return {
-      props: { author, projects },
+      props: { author },
       revalidate: 1
     }
 }
