@@ -16,7 +16,7 @@ export default function Index({ carouselItems, author, projects }) {
   var counter = 1;
 
   useEffect(() => {
-    if(document) {
+    if(carousel) {
       setInterval(() => {
         document.getElementById('radio'+counter).checked = true;
         counter++;
