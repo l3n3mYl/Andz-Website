@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
-import styles from '../styles/css/kontaktai.module.css'
 import { getAuthorInfo } from '../lib/api'
+import styles from '../styles/css/kontaktai.module.css'
 
 const Kontaktai = ({ author }) => {
 

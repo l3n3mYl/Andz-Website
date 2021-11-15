@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 100px;
+    height: fit-content;
 
     .imageHover {
         overflow: hidden;
@@ -41,7 +42,7 @@
 
 
         &:hover {
-
+            cursor: default;
             .serviceInfo {
                 opacity: 100%;
                 transition: 0.8s;
@@ -57,6 +58,7 @@
     }
 
     .singleProject {
+        cursor: default;
         padding: 50px;
         &:nth-child(odd) {
             place-self: center end;

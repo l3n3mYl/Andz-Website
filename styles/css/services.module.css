@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px;
+  height: fit-content;
 }
 .projectsGrid .imageHover {
   overflow: hidden;
@@ -36,6 +37,9 @@
   z-index: 1;
   font-size: 1.5em;
 }
+.projectsGrid .imageHover:hover {
+  cursor: default;
+}
 .projectsGrid .imageHover:hover .serviceInfo {
   opacity: 100%;
   transition: 0.8s;
@@ -47,6 +51,7 @@
   transition: 0.8s;
 }
 .projectsGrid .singleProject {
+  cursor: default;
   padding: 50px;
 }
 .projectsGrid .singleProject:nth-child(odd) {

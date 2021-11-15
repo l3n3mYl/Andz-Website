@@ -140,8 +140,10 @@
     }
 
     .header {
+        position: sticky;
+        top: 0;
         width: 70%;
-        margin-left: 16%;
+        margin: auto;
 
         h1 {
             display: none;

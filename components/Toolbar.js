@@ -1,6 +1,7 @@
-import styles from '../styles/css/toolbar.module.css'
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
+import styles from '../styles/css/toolbar.module.css'
+
 
 const Toolbar = ({ title }) => {
     return (

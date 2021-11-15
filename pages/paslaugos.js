@@ -5,9 +5,6 @@ import { getAuthorInfo, getAllServices } from '../lib/api'
 import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
 
 const Paslaugos = ({ author, services }) => {
-
-  
-
     const imgUrlBuilder = imageUrlBuilder({
         projectId: PROJECT_ID,
         dataset: PROJECT_DATASET
@@ -15,7 +12,7 @@ const Paslaugos = ({ author, services }) => {
 
     return (
         <Layout title="Paslaugos" author={author}>
-            <div className={styles.projectsGrid}>
+          <div className={styles.projectsGrid}>
             {services.map((service, i) => {
               return (
                 <div className={styles.singleProject} key={i}>
