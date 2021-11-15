@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import imageUrlBuilder from '@sanity/image-url'
@@ -13,19 +14,25 @@ export default function Index({ carouselItems, author, projects }) {
     dataset: PROJECT_DATASET
   })
 
+  // Use router to create div with onClick function
+  const router = useRouter()
+
+  // Change picture every [Interval] by incrementing counter
   var counter = 1;
 
   useEffect(() => {
-    if(carousel) {
-      setInterval(() => {
-        document.getElementById('radio'+counter).checked = true;
+    setInterval(() => {
+      try {
+        document.getElementById('radio'+counter).checked = true
         counter++;
         
         if(counter > 5) {
             counter = 1;
         }
-      }, 5000);
-    }
+      } catch (e) {
+        console.log(e)
+      }
+    }, 5000);
   }, [])
 
   return (
@@ -39,7 +46,6 @@ export default function Index({ carouselItems, author, projects }) {
               <input type="radio" name="radio-btn" id="radio3" className={styles.radio3} />
               <input type="radio" name="radio-btn" id="radio4" className={styles.radio4} />
               <input type="radio" name="radio-btn" id="radio5" className={styles.radio5} />
-
               {
                 carousel.map(( pic, i ) => {
                   if( i==0 ) {
@@ -76,11 +82,10 @@ export default function Index({ carouselItems, author, projects }) {
 
             </div>
           </div>
-
           <div className={styles.projectsGrid}>
             {projects.map((project, i) => {
               return (
-                <div className={styles.singleProject} key={i}>
+                <div onClick={() => router.push({pathname: `/galerija/${project.slug.current}`})} className={styles.singleProject} key={i}>
                   <div className={styles.imageHover}>
                     <div className={styles.projectImg}>
                       <img src={imgUrlBuilder.image(project.mainImage).width(500).height(300)} alt="" />
@@ -90,8 +95,7 @@ export default function Index({ carouselItems, author, projects }) {
                     <h2>{project.title}</h2>
                     <h3>{project.subtitle}</h3>
                   </div>
-                </div>
-              )
+                </div>)
             })}
           </div>
         </div>

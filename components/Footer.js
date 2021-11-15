@@ -1,10 +1,14 @@
-import styles from '../styles/css/footer.module.css'
 import React from 'react'
+import styles from '../styles/css/footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faTwitter, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = ({ author }) => {
 
+    /**
+    * Get authors soc media for the footer nav
+    * 
+    */
     const facebook = (e) => {
         e.preventDefault()
         window.location.assign(author[0].facebook)
