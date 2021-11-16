@@ -33,5 +33,14 @@
     filter: invert(1);
   }
 }
+@media screen and (max-width: 799px) {
+  .scrollPath {
+    display: none;
+  }
+
+  .progressbar {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=scrollbar.module.css.map */

@@ -43,5 +43,13 @@
     margin-right: 20px;
   }
 }
+@media screen and (max-width: 450px) {
+  .mainDiv .socMedia {
+    font-size: 1.2em;
+  }
+  .mainDiv .info {
+    font-size: 0.8em;
+  }
+}
 
 /*# sourceMappingURL=footer.module.css.map */
