@@ -19,17 +19,17 @@ const Paslaugos = ({ author, services }) => {
                   <div className={styles.projectInfo}>
                     <h2>{service.title}</h2>
                   </div>
-                      <div className={styles.imageHover}>
-                        <div className={styles.projectImg}>
-                          <img src={imgUrlBuilder.image(service.image).width(1920).height(1080)} alt="" />
-                        </div>
-                        <div className={styles.serviceInfo}>
-                            <p>{service.photoAmount} Nuotraukų</p>
-                            <p>{service.hourAmount} Nuostabiai praleisto laiko</p>
-                            <p>Galimybė matyti savo nuotraukas čia</p>
-                            <p className={styles.price}>{service.price} &euro;</p>
-                        </div>
-                      </div>
+                  <div className={styles.imageHover}>
+                    <div className={styles.projectImg}>
+                      <img src={imgUrlBuilder.image(service.image).width(1920).height(1080)} alt="" />
+                    </div>
+                    <div className={styles.serviceInfo}>
+                        <p>{service.photoAmount} Nuotraukų</p>
+                        <p>{service.hourAmount} h Nuostabiai praleisto laiko</p>
+                        <p>Galimybė matyti savo nuotraukas čia</p>
+                        <p className={styles.price}>{service.price} &euro;</p>
+                    </div>
+                  </div>
                 </div>
               )
             })}

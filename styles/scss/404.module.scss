@@ -1,0 +1,131 @@
+@use './components/vars' as *;
+
+.messageBox {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto 0 auto;
+    background-color: $accentColor;
+    color: $backgroundColor;
+    opacity: 0.95;
+    position: relative;
+    z-index: 999;
+    cursor: default;
+    pointer-events: none;
+
+    h1 {
+        font-size: 2em;
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-size: 1.5em;
+
+        span {
+            pointer-events: auto;
+            color: #0645AD;
+            transition: 0.3s;
+            padding: 5px;
+            cursor: pointer;
+            &:hover {
+                color: rgb(168, 54, 134);
+                text-shadow: 0 0 40px rgb(255, 2, 78);
+            }
+        }
+    }
+}
+
+.section {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 95.6vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    i {
+        color: rgb(46, 46, 46);
+        font-style: normal;
+        transition: 0.5s;
+        padding: 0 5px;
+        cursor: default;
+
+        &:hover {
+            color: rgb(92, 0, 64);
+            text-shadow: 0 0 60px rgb(255, 2, 78);
+        }
+    }
+
+    .row {
+        position: relative;
+        top: -60%; 
+        width: 100%;
+        display: flex;
+        padding: 5px 0;
+        white-space: nowrap;
+        font-size: 128px;
+        transform: rotate(-30deg);
+
+        div {
+            animation: animate1 80s linear -80s infinite;
+
+            &:nth-child(2) {
+                animation: animate2 80s linear -40s infinite;
+            }
+        }
+
+        &:nth-child(even) {
+            div {
+                animation: animate3 80s linear -80s infinite;
+
+                &:nth-child(2) {
+                    animation: animate4 80s linear -40s infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+@keyframes animate3 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

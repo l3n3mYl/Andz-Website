@@ -8,8 +8,12 @@ import styles from '../../styles/css/single_project.module.css'
 import SanityBlockContent from '@sanity/block-content-to-react'
 import { PROJECT_ID, PROJECT_DATASET } from '../../lib/constants'
 
+import { useRouter } from 'next/router'
+import Custom404 from '../404'
 
 const SingleProject = ({ author, projects }) => {
+
+    const router = useRouter()
 
     const imgUrlBuilder = imageUrlBuilder({
         projectId: PROJECT_ID,
@@ -50,7 +54,7 @@ const SingleProject = ({ author, projects }) => {
                 })}
             </div>
         </Layout> 
-        : <DefaultErrorPage statusCode={404} />
+        : <Custom404 />
     )
 }
 

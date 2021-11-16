@@ -138,3 +138,55 @@
         padding-top: 6% !important;
     }
 }
+
+@media screen and (max-width: 580px) {
+    .singleProject {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        min-width: 100vw;
+        height: auto;
+
+        .serviceInfo {
+            width: 30vw;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        .price {
+            font-size: 1.5em !important;
+        } 
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .singleProject {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        min-width: 100vw;
+        height: auto;
+
+        .serviceInfo {
+            width: 30vw;
+        }
+
+        p {
+            font-size: 0.8em;
+        }
+
+        .price {
+            font-size: 1.5em !important;
+        } 
+
+        img {
+            width: 100%;
+        }
+    }
+}

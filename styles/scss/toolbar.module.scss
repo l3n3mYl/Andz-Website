@@ -117,6 +117,9 @@
 
 @media screen and (max-width: 900px) {
     .header {
+        .bigLogo {
+            padding-left: 30%;
+        }
         h1{
             padding-top: 20px;
             display: block;
@@ -126,7 +129,7 @@
             li {
             
                 a {
-                    font-size: 1em;
+                    font-size: 1.3em;
                 }
         
             }
@@ -165,6 +168,8 @@
                 
                 li {
                     a {
+                        color: #fff;
+                        font-size: 1.2em;
                         opacity: 1;
                         &:hover {
                             color: $accentColor;

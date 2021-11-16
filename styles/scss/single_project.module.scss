@@ -28,3 +28,28 @@
         padding-bottom: 20px;
     }
 }
+
+@media screen and (max-width: 1400px) {
+    .innerDiv {
+        width: 100%;
+        padding: 100px !important;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .innerDiv {
+        width: 100%;
+        padding: 100px 0 !important;
+
+        .body {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .innerDiv {
+        width: 100%;
+        padding: 150px 0 !important;
+    }
+}
