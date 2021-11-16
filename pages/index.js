@@ -18,7 +18,7 @@ export default function Index({ carouselItems, author, projects }) {
   const router = useRouter()
 
   // Change picture every [Interval] by incrementing counter
-  var counter = 1;
+  var counter = 2;
 
   useEffect(() => {
     setInterval(() => {

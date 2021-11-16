@@ -121,5 +121,47 @@
     padding-top: 6% !important;
   }
 }
+@media screen and (max-width: 580px) {
+  .singleProject {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    min-width: 100vw;
+    height: auto;
+  }
+  .singleProject .serviceInfo {
+    width: 30vw;
+  }
+  .singleProject p {
+    font-size: 1em;
+  }
+  .singleProject .price {
+    font-size: 1.5em !important;
+  }
+  .singleProject img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .singleProject {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    min-width: 100vw;
+    height: auto;
+  }
+  .singleProject .serviceInfo {
+    width: 30vw;
+  }
+  .singleProject p {
+    font-size: 0.8em;
+  }
+  .singleProject .price {
+    font-size: 1.5em !important;
+  }
+  .singleProject img {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=services.module.css.map */

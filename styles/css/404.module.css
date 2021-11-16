@@ -1,0 +1,114 @@
+.messageBox {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 0 auto;
+  background-color: #131313;
+  color: #F2F2F2;
+  opacity: 0.95;
+  position: relative;
+  z-index: 999;
+  cursor: default;
+  pointer-events: none;
+}
+.messageBox h1 {
+  font-size: 2em;
+  padding-bottom: 50px;
+}
+.messageBox h2 {
+  font-size: 1.5em;
+}
+.messageBox h2 span {
+  pointer-events: auto;
+  color: #0645AD;
+  transition: 0.3s;
+  padding: 5px;
+  cursor: pointer;
+}
+.messageBox h2 span:hover {
+  color: #a83686;
+  text-shadow: 0 0 40px #ff024e;
+}
+
+.section {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 95.6vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.section i {
+  color: #2e2e2e;
+  font-style: normal;
+  transition: 0.5s;
+  padding: 0 5px;
+  cursor: default;
+}
+.section i:hover {
+  color: #5c0040;
+  text-shadow: 0 0 60px #ff024e;
+}
+.section .row {
+  position: relative;
+  top: -60%;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  white-space: nowrap;
+  font-size: 128px;
+  transform: rotate(-30deg);
+}
+.section .row div {
+  animation: animate1 80s linear -80s infinite;
+}
+.section .row div:nth-child(2) {
+  animation: animate2 80s linear -40s infinite;
+}
+.section .row:nth-child(even) div {
+  animation: animate3 80s linear -80s infinite;
+}
+.section .row:nth-child(even) div:nth-child(2) {
+  animation: animate4 80s linear -40s infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/*# sourceMappingURL=404.module.css.map */
