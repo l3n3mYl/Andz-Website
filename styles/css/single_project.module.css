@@ -1,45 +1,35 @@
-.innerDiv {
+.content {
   width: 50%;
-  min-height: max-content;
-  height: auto;
+  height: fit-content;
   margin: auto;
   padding: 100px 0;
 }
-.innerDiv .title {
+.content .title {
   font-size: 3em;
   text-align: center;
   padding-bottom: 30px;
 }
-.innerDiv .body {
+.content .body {
   margin: 50px 0 100px 0;
 }
-.innerDiv .subtitle {
+.content .subtitle {
   font-size: 1.2em;
   text-align: center;
   padding-bottom: 50px;
   color: darkgrey;
 }
-.innerDiv .singleImage {
+.content .singleImage {
   padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1400px) {
-  .innerDiv {
-    width: 100%;
-    padding: 100px !important;
+@media screen and (max-width: 500px) {
+  .body {
+    width: 100vw;
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .innerDiv {
-    width: 100%;
-    padding: 100px 0 !important;
-  }
-  .innerDiv .body {
-    padding: 0 50px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .innerDiv {
+  .content {
     width: 100%;
     padding: 150px 0 !important;
   }

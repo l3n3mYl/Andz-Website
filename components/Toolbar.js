@@ -6,7 +6,7 @@ import styles from '../styles/css/toolbar.module.css'
 const Toolbar = ({ title }) => {
     return (
         <header className={styles.header}>
-            <Link href='/'><h1 className={styles.smallLogo}><Image src='/logo.png' width={75} height={60} /></h1></Link>
+            <Link href='/'><h1 className={styles.smallLogo}><Image src='/logo.png' width={65} height={55} /></h1></Link>
             <input type="checkbox" id={styles.menuToggle} className={styles.menuToggle} />
             <nav>
                 <ul>

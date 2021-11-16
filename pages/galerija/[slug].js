@@ -38,20 +38,22 @@ const SingleProject = ({ author, projects }) => {
         projectExist 
         ? <Layout title={currentUrl} author={author}>
             <div className={styles.innerDiv}>
-                <h1 className={styles.title}>{currentProject.title}</h1>
-                <h2 className={styles.subtitle}>{currentProject.subtitle}</h2>
-                {currentProject.body 
-                    ? <div className={styles.body}>
-                        <SanityBlockContent blocks={currentProject.body} imageOptions={{fit: 'max'}} {...client.config()}/>
-                      </div> 
-                    : <></>}
-                {currentProject.images.map((image, i) => {
-                    return <div className={styles.photos} key={i}>
-                                <div className={styles.singleImage}>
-                                    <img src={imgUrlBuilder.image(image).width(1920).height(1080)} alt="" />
+                <div className={styles.content}>
+                    <h1 className={styles.title}>{currentProject.title}</h1>
+                    <h2 className={styles.subtitle}>{currentProject.subtitle}</h2>
+                    {currentProject.body 
+                        ? <div className={styles.body}>
+                            <SanityBlockContent blocks={currentProject.body} imageOptions={{fit: 'max'}} {...client.config()}/>
+                        </div> 
+                        : <></>}
+                    {currentProject.images.map((image, i) => {
+                        return <div className={styles.photos} key={i}>
+                                    <div className={styles.singleImage}>
+                                        <img src={imgUrlBuilder.image(image).width(1920).height(1080)} alt="" />
+                                    </div>
                                 </div>
-                            </div>
-                })}
+                    })}
+                </div>
             </div>
         </Layout> 
         : <Custom404 />

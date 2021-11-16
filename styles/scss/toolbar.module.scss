@@ -123,6 +123,7 @@
         h1{
             padding-top: 20px;
             display: block;
+            z-index: 99;
         }
         nav ul {
 
@@ -221,3 +222,18 @@
     }
 }
 
+// @media screen and (max-width: 799px) {
+//     .mainDiv {
+//         grid-template-columns: 1fr 1fr;
+
+//         .socMedia {
+//             grid-column: 1;
+//             margin-left: 20px;
+//         }
+
+//         .info {
+//             grid-column: 2;
+//             margin-right: 20px;
+//         }
+//     }
+// }
