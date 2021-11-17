@@ -1,0 +1,58 @@
+.scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.progressbar {
+  z-index: 99;
+  position: fixed;
+  border-bottom: 2px solid black;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#F2F2F2), to(#D0D0D0));
+  background: linear-gradient(to top, #F2F2F2, #D0D0D0);
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+.progressbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#F2F2F2), to(#D0D0D0));
+  background: linear-gradient(to top, #F2F2F2, #D0D0D0);
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+}
+
+@-webkit-keyframes animate {
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+}
+
+@keyframes animate {
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .scrollPath {
+    display: none;
+  }
+  .progressbar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=scrollbar.module.css.map */

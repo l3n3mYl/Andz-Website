@@ -1,0 +1,5 @@
+.Image > div, .Image img {
+  -webkit-filter: none !important;
+          filter: none !important;
+}
+/*# sourceMappingURL=image.module.css.map */
