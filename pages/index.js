@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import imageUrlBuilder from '@sanity/image-url'
 import styles from '../styles/css/main.module.css'
@@ -17,22 +17,23 @@ export default function Index({ carouselItems, author, projects }) {
   // Use router to create div with onClick function
   const router = useRouter()
 
-  // Change picture every [Interval] by incrementing counter
-  var counter = 2;
+  const [_, incrCounter] = useState(2)
 
   useEffect(() => {
-    setInterval(() => {
-      try {
-        document.getElementById('radio'+counter).checked = true
-        counter++;
-        
-        if(counter > 5) {
-            counter = 1;
+    const setNextSlide = setInterval(() => {
+      incrCounter(prevCount => {
+        document.getElementById('radio'+prevCount).checked = true
+        prevCount++
+
+        if(prevCount > 5) {
+          prevCount = 1;
         }
-      } catch (e) {
-        console.log(e)
-      }
-    }, 5000);
+
+        return prevCount
+      })
+    }, 5000)
+
+    return () => clearInterval(setNextSlide)
   }, [])
 
   return (

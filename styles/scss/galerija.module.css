@@ -1,0 +1,145 @@
+.projectsGrid {
+  cursor: default;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5%;
+  margin: auto;
+  width: 50vw;
+  padding: 100px 0px 200px 0px;
+}
+
+.projectsGrid .imageHover {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projectsGrid .imageHover:hover img {
+  background-color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.projectsGrid .singleProject:nth-child(odd) {
+  place-self: center end;
+}
+
+.projectsGrid .singleProject:nth-child(even) {
+  place-self: center start;
+}
+
+.projectInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+}
+
+.projectInfo h2 {
+  font-size: 1.5rem;
+}
+
+.projectInfo h3 {
+  font-size: 1em;
+  color: darkgray;
+}
+
+@media screen and (max-width: 1030px) {
+  .singleProject {
+    padding: 50px 0px 50px 0px;
+  }
+  .projectsGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 100px 0 200px 0;
+  }
+  .projectsGrid .imageHover {
+    width: 50vw !important;
+  }
+  .projectsGrid h2 {
+    font-size: 2em;
+  }
+  .projectsGrid h3 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .projectsGrid {
+    padding: 100px 30% !important;
+  }
+  .projectsGrid .imageHover {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .projectsGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projectsGrid .imageHover {
+    width: 100vw !important;
+  }
+  .singleProject {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .singleProject img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .projectsGrid {
+    margin: 0px 20% !important;
+  }
+  .projectsGrid .imageHover {
+    width: 30vw;
+  }
+}
+/*# sourceMappingURL=galerija.module.css.map */
