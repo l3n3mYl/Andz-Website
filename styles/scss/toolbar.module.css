@@ -1,10 +1,8 @@
 .menuToggle:checked ~ nav {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 .menuToggle:checked ~ nav a {
   opacity: 1;
-  -webkit-transition: opacity 250ms ease-in-out 250ms;
   transition: opacity 250ms ease-in-out 250ms;
 }
 
@@ -18,12 +16,8 @@
   left: 0;
   margin-left: 1em;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .label span, .label span::before, .label span::after {
   width: 2em;
@@ -63,14 +57,9 @@
   width: 100%;
   left: 0;
   background-color: rgba(208, 208, 208, 0.5);
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
+  transform: scale(1, 0);
+  transform-origin: top;
   transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 .header nav ul {
   margin: 0;
@@ -94,22 +83,19 @@
   font-size: 1.2rem;
   text-transform: uppercase;
   opacity: 0;
-  -webkit-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
 }
 .header nav ul li a:hover {
   color: #131313;
 }
 .header nav ul li a:hover::before {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 .header nav ul li .highlight {
   color: #131313;
 }
 .header nav ul li .highlight:before {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 @media screen and (max-width: 900px) {
@@ -131,6 +117,7 @@
   }
 
   .header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 70%;
@@ -164,8 +151,7 @@
     color: #131313;
   }
   .header nav ul li a:hover::before {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   .header nav ul li a::before {
     content: "";
@@ -175,12 +161,8 @@
     background-color: #131313;
     position: absolute;
     bottom: -0.4em;
-    -webkit-transform: scale(0, 1);
-            transform: scale(0, 1);
-    -webkit-transition: -webkit-transform ease-in-out 250ms;
-    transition: -webkit-transform ease-in-out 250ms;
+    transform: scale(0, 1);
     transition: transform ease-in-out 250ms;
-    transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
   }
   .header nav ul li:nth-child(1) {
     grid-column: 2/3;

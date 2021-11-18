@@ -13,11 +13,8 @@
 }
 .projectsGrid .imageHover:hover img {
   background-color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-filter: opacity(60%);
-          filter: opacity(60%);
-  -webkit-transition: 0.8s;
+  transform: scale(1.1);
+  filter: opacity(60%);
   transition: 0.8s;
 }
 .projectsGrid .singleProject:nth-child(odd) {
@@ -28,19 +25,10 @@
 }
 
 .projectInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 20px;
 }
 .projectInfo h2 {
@@ -57,19 +45,10 @@
   }
 
   .projectsGrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 100px 0 200px 0;
   }
   .projectsGrid .imageHover {
@@ -93,32 +72,18 @@
 }
 @media screen and (max-width: 850px) {
   .projectsGrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .projectsGrid .imageHover {
     width: 100vw !important;
   }
 
   .singleProject {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: auto;
   }
   .singleProject img {

@@ -1,19 +1,10 @@
 .messageBox {
   width: 50vw;
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 100px auto 0 auto;
   background-color: #131313;
   color: #F2F2F2;
@@ -33,7 +24,6 @@
 .messageBox h2 span {
   pointer-events: auto;
   color: #0645AD;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 5px;
   cursor: pointer;
@@ -54,19 +44,13 @@
   left: 0;
   width: 100vw;
   height: 95.6vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: hidden;
 }
 .section i {
   color: #2e2e2e;
   font-style: normal;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 0 5px;
   cursor: default;
@@ -79,14 +63,11 @@
   position: relative;
   top: -60%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 5px 0;
   white-space: nowrap;
   font-size: 128px;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 .section .row div {
   -webkit-animation: animate1 80s linear -80s infinite;
@@ -107,83 +88,67 @@
 
 @-webkit-keyframes animate1 {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 @keyframes animate1 {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 @-webkit-keyframes animate2 {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 @keyframes animate2 {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 @-webkit-keyframes animate3 {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 @keyframes animate3 {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 @-webkit-keyframes animate4 {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    transform: translateX(-200%);
   }
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 @keyframes animate4 {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    transform: translateX(-200%);
   }
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 @media screen and (max-width: 1430px) {

@@ -1,17 +1,8 @@
 .projectsGrid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 100px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -53,16 +44,12 @@
 }
 .projectsGrid .imageHover:hover .serviceInfo {
   opacity: 100%;
-  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
 .projectsGrid .imageHover:hover img {
   background-color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-filter: opacity(60%);
-          filter: opacity(60%);
-  -webkit-transition: 0.8s;
+  transform: scale(1.1);
+  filter: opacity(60%);
   transition: 0.8s;
 }
 .projectsGrid .singleProject {
@@ -77,19 +64,10 @@
 }
 
 .projectInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 20px;
 }
 .projectInfo h2 {
@@ -102,19 +80,10 @@
 
 @media screen and (max-width: 850px) {
   .projectsGrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .projectsGrid h3 {
     text-align: center;
@@ -124,13 +93,8 @@
   }
 
   .singleProject {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0 !important;
     min-width: 100vw;
     height: auto;
@@ -161,13 +125,8 @@
 }
 @media screen and (max-width: 580px) {
   .singleProject {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0 !important;
     min-width: 100vw;
     height: auto;
@@ -187,13 +146,8 @@
 }
 @media screen and (max-width: 440px) {
   .singleProject {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0 !important;
     min-width: 100vw;
     height: auto;

@@ -1,10 +1,7 @@
-import client, { getClient } from "../../lib/sanity";
-import ProjectsGrid from "../../components/ProjectsGrid";
-import Image from "../../components/HandleImages/Image";
+import { getClient } from "../../lib/sanity";
+import IndividualProject from "../../components/IndividualProject";
 import Layout from "../../components/Layout";
 import { getAuthorInfo, getSlugProject } from "../../lib/api";
-import styles from "../../styles/css/single_project.module.css";
-import SanityBlockContent from "@sanity/block-content-to-react";
 
 const SingleProject = ({ author, project }) => {
   let currProject;
@@ -13,31 +10,7 @@ const SingleProject = ({ author, project }) => {
 
   return currProject ? (
     <Layout title={project.slug.current} author={author}>
-      <ProjectsGrid images={currProject.images} project={project} page="slug" />
-      {/* <div className={styles.innerDiv}>
-        <div className={styles.content}>
-          <h1 className={styles.title}>{project.title}</h1>
-          <h2 className={styles.subtitle}>{project.subtitle}</h2>
-          {project.body && (
-            <div className={styles.body}>
-              <SanityBlockContent
-                blocks={project.body}
-                imageOptions={{ fit: "max" }}
-                {...client.config()}
-              />
-            </div>
-          )}
-          {project.images.map((image, i) => {
-            return (
-              <div className={styles.photos} key={i}>
-                <div className={styles.singleImage}>
-                  <Image image={image} alt="" paddingTop={0} />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
+      <IndividualProject images={currProject.images} project={project} page="slug" />
     </Layout>
   ) : null;
 };

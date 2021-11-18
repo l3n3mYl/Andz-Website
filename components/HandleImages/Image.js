@@ -1,12 +1,9 @@
 import { client } from '../../lib/sanity'
 import { number, string, oneOfType, object } from 'prop-types'
 import { useNextSanityImage } from 'next-sanity-image'
-import classNames from 'classnames'
 import NextImage from 'next/image'
 import React from 'react'
 import ResponsiveMedia from '../ResponsiveMedia/index'
-
-import styles from './styles/image.module.css'
 
 const SanityImage = ({ image, alt, ...other }) => {
   const imageProps = useNextSanityImage(client, image)
@@ -20,7 +17,7 @@ const StaticImage = ({ image, alt, ...other }) => {
 /**
  * Component to handle all types images with ratio support
  */
-const Image = ({ image, paddingTop, alt, className, src, ...other }) => {
+const Image = ({ image, alt, paddingTop, className, src, ...other }) => {
   if (!image && !src) return null
   let imageEl
   if (src) {
@@ -36,7 +33,7 @@ const Image = ({ image, paddingTop, alt, className, src, ...other }) => {
   if (paddingTop) {
     return (
       <ResponsiveMedia
-        className={classNames(styles.Image, className)}
+        className={className}
         paddingTop={paddingTop}
       >
         {imageEl}
@@ -44,7 +41,7 @@ const Image = ({ image, paddingTop, alt, className, src, ...other }) => {
     )
   }
 
-  return <div className={classNames(styles.Image, className)}>{imageEl}</div>
+  return <div className={className}>{imageEl}</div>
 }
 
 Image.propTypes = {

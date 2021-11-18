@@ -14,8 +14,6 @@
 
 .slides {
   width: 500%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .slides input {
@@ -24,7 +22,6 @@
 
 .slide {
   width: 20%;
-  -webkit-transition: 2s;
   transition: 2s;
 }
 .slide img {
@@ -39,12 +36,8 @@
   position: absolute;
   width: 100vw;
   margin-top: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .manualBtn {
@@ -52,8 +45,7 @@
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transform: 1s;
-          transform: 1s;
+  transform: 1s;
 }
 .manualBtn:not(:last-child) {
   margin-right: 40px;
@@ -86,20 +78,15 @@
   position: absolute;
   width: 100vw;
   margin-top: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .navigationAuto div {
   border: 1px solid #fff;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transform: 1s;
-          transform: 1s;
+  transform: 1s;
 }
 .navigationAuto div:not(:last-child) {
   margin-right: 40px;
@@ -137,11 +124,8 @@
 }
 .projectsGrid .imageHover:hover img {
   background-color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-filter: opacity(60%);
-          filter: opacity(60%);
-  -webkit-transition: 0.8s;
+  transform: scale(1.1);
+  filter: opacity(60%);
   transition: 0.8s;
 }
 .projectsGrid .singleProject:nth-child(odd) {
@@ -152,19 +136,10 @@
 }
 
 .projectInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 20px;
 }
 .projectInfo h2 {
@@ -177,19 +152,10 @@
 
 @media screen and (max-width: 799px) {
   .projectsGrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .projectsGrid h3 {
     text-align: center;

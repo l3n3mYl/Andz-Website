@@ -2,7 +2,7 @@ import { node, number } from 'prop-types'
 import classNames from 'classnames'
 import React from 'react'
 
-import styles from './styles/ResponsiveMedia.module.css'
+import styles from './styles/ResponsiveMedia.module.scss'
 
 const formatRatio = (paddingTop) => {
   return parseFloat((paddingTop * 100).toFixed(4))
