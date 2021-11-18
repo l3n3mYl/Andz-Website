@@ -4,13 +4,10 @@
   overflow: hidden;
   width: 100%;
 }
-
 .ResponsiveMedia > * {
   width: 100%;
 }
-
 .ResponsiveMedia > iframe {
   position: absolute;
   height: 100%;
-}
-/*# sourceMappingURL=ResponsiveMedia.module.css.map */
+}/*# sourceMappingURL=ResponsiveMedia.module.css.map */

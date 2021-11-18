@@ -17,14 +17,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-
 .projectsGrid .imageHover {
   overflow: hidden;
   cursor: pointer;
   position: relative;
   width: 30vw;
 }
-
 .projectsGrid .imageHover .serviceInfo {
   width: 100%;
   height: 100%;
@@ -33,38 +31,31 @@
   left: 5%;
   opacity: 0%;
 }
-
 .projectsGrid .imageHover .serviceInfo p {
   padding-top: 2%;
   font-weight: 500;
 }
-
 .projectsGrid .imageHover .serviceInfo .price {
   font-size: 1.8em;
   padding-top: 13%;
   position: absolute;
   left: 35%;
 }
-
 .projectsGrid .imageHover .projectImage {
   z-index: 0;
 }
-
 .projectsGrid .imageHover .serviceInfo {
   z-index: 1;
   font-size: 1.5em;
 }
-
 .projectsGrid .imageHover:hover {
   cursor: default;
 }
-
 .projectsGrid .imageHover:hover .serviceInfo {
   opacity: 100%;
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
-
 .projectsGrid .imageHover:hover img {
   background-color: white;
   -webkit-transform: scale(1.1);
@@ -74,16 +65,13 @@
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
-
 .projectsGrid .singleProject {
   cursor: default;
   padding: 50px;
 }
-
 .projectsGrid .singleProject:nth-child(odd) {
   place-self: center end;
 }
-
 .projectsGrid .singleProject:nth-child(even) {
   place-self: center start;
 }
@@ -104,11 +92,9 @@
           flex-direction: column;
   padding-top: 20px;
 }
-
 .projectInfo h2 {
   font-size: 1.5rem;
 }
-
 .projectInfo h3 {
   font-size: 1em;
   color: darkgray;
@@ -136,6 +122,7 @@
   .projectsGrid .imageHover {
     width: 100vw !important;
   }
+
   .singleProject {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -152,7 +139,6 @@
     width: 100%;
   }
 }
-
 @media screen and (max-width: 1600px) {
   .projectsGrid h2 {
     font-size: 1.8em;
@@ -164,16 +150,15 @@
     font-size: 1.2em;
   }
 }
-
 @media screen and (max-width: 1300px) {
   .projectsGrid .imageHover {
     width: 60vw;
   }
+
   .price {
     padding-top: 6% !important;
   }
 }
-
 @media screen and (max-width: 580px) {
   .singleProject {
     display: -webkit-box;
@@ -200,7 +185,6 @@
     width: 100%;
   }
 }
-
 @media screen and (max-width: 440px) {
   .singleProject {
     display: -webkit-box;
@@ -226,5 +210,4 @@
   .singleProject img {
     width: 100%;
   }
-}
-/*# sourceMappingURL=services.module.css.map */
+}/*# sourceMappingURL=services.module.css.map */

@@ -13,7 +13,6 @@
           align-items: center;
   padding-top: 200px;
 }
-
 .innerDiv .authorInfo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,38 +28,32 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .innerDiv .authorInfo .authorImg {
   width: 500px;
   height: auto;
   margin: auto;
   padding-right: 100px;
 }
-
 .innerDiv .authorInfo .authorBio {
   width: 800px;
   padding-left: 100px;
   font-size: 1.3em;
 }
-
 .innerDiv .authorInfo .authorBio h1 {
   font-weight: bold;
   font-size: 2em;
   padding-bottom: 30px;
 }
-
 .innerDiv .authorInfo .authorBio h2 {
   font-weight: bold;
   font-size: 1.8em;
   padding-bottom: 20px;
 }
-
 .innerDiv .authorInfo .authorBio h3 {
   font-weight: bold;
   font-size: 1.6em;
   padding-bottom: 15px;
 }
-
 .innerDiv .authorInfo .authorBio h4 {
   font-weight: bold;
   font-size: 1.5em;
@@ -77,19 +70,16 @@
     font-size: 1em !important;
   }
 }
-
 @media screen and (max-width: 1600px) {
   .innerDiv .authorImg {
     width: 30vw !important;
   }
 }
-
 @media screen and (max-width: 1200px) {
   .innerDiv .authorImg {
     all: unset;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .innerDiv {
     padding-top: 100px !important;
@@ -110,7 +100,6 @@
     padding: 0px 15% 20% 15% !important;
   }
 }
-
 @media screen and (max-width: 650px) {
   .innerDiv {
     padding-top: 150px !important;
@@ -129,5 +118,4 @@
   .innerDiv .authorInfo .authorBio {
     padding: 20px !important;
   }
-}
-/*# sourceMappingURL=apie.module.css.map */
+}/*# sourceMappingURL=apie.module.css.map */

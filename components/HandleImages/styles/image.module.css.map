@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,MADE,GACE,GAAG,EADX,MAAM,CACO,GAAG,CAAC;EACX,MAAM,EAAE,eAAe;CACxB",
-    "sources": [
-        "image.module.scss"
-    ],
-    "names": [],
-    "file": "image.module.css"
-}
+{"version":3,"sources":["image.module.scss"],"names":[],"mappings":"AACI;EACE,+BAAA;UAAA,uBAAA;AAAN","file":"image.module.css"}

@@ -1,4 +1,5 @@
 import client, { getClient } from "../../lib/sanity";
+import ProjectsGrid from "../../components/ProjectsGrid";
 import Image from "../../components/HandleImages/Image";
 import Layout from "../../components/Layout";
 import { getAuthorInfo, getSlugProject } from "../../lib/api";
@@ -12,7 +13,8 @@ const SingleProject = ({ author, project }) => {
 
   return currProject ? (
     <Layout title={project.slug.current} author={author}>
-      <div className={styles.innerDiv}>
+      <ProjectsGrid images={currProject.images} project={project} page="slug" />
+      {/* <div className={styles.innerDiv}>
         <div className={styles.content}>
           <h1 className={styles.title}>{project.title}</h1>
           <h2 className={styles.subtitle}>{project.subtitle}</h2>
@@ -35,7 +37,7 @@ const SingleProject = ({ author, project }) => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </Layout>
   ) : null;
 };
