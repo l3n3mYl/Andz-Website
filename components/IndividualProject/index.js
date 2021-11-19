@@ -5,7 +5,7 @@ import BlockContent from '../BlockContentHandler';
 import { string, array } from 'prop-types'
 import AnyImage from '../ImageHandler/index'
 
-const ProjectsGrid = ({ images, project, page, className }) => {
+const SingleProject = ({ images, project, className }) => {
 
   const { 
     title,
@@ -21,18 +21,17 @@ const ProjectsGrid = ({ images, project, page, className }) => {
         className={styles.body}
         blocks={body}
       />
-      {images.map((image, i) => {
-        return <AnyImage image={image} key={`#${page}+${i}`} className={styles.images} alt=''/>
+      {images.map((image) => {
+        return <AnyImage image={image} key={image._key} className={styles.images} alt=''/>
       })}
     </div>
   )
 }
 
-ProjectsGrid.propTypes = {
+SingleProject.propTypes = {
   images: array.isRequired,
-  page: string.isRequired,
   title: string,
   subtitle: string,
 }
 
-export default ProjectsGrid
+export default SingleProject
