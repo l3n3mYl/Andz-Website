@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,MADE,GACE,GAAG,EADX,MAAM,CACO,GAAG,CAAC;EACX,MAAM,EAAE,eAAe;CACxB",
-    "sources": [
-        "image.module.scss"
-    ],
-    "names": [],
-    "file": "image.module.css"
-}

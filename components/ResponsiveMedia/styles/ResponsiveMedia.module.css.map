@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,CAAC;EACT,QAAQ,EAAE,MAAM;EAChB,KAAK,EAAE,IAAI;CAYd;;AAhBD,AAOI,gBAPY,GAOR,CAAC,CAAC;EACF,KAAK,EAAE,IAAI;CACd;;AATL,AAYI,gBAZY,GAYR,MAAM,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,IAAI;CACf",
-    "sources": [
-        "ResponsiveMedia.module.scss"
-    ],
-    "names": [],
-    "file": "ResponsiveMedia.module.css"
-}
