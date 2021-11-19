@@ -1,0 +1,64 @@
+.ProjectsLayout {
+  padding: 150px 0 100px 0;
+  cursor: default;
+
+  .projectDiv {
+    padding-bottom: 50px;
+
+    .projectInfo {
+      pointer-events: none;
+      text-align: center;
+
+      h2 {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: gray;
+      }
+    }
+
+    .imageHover {
+      overflow: hidden;
+      cursor: pointer;
+
+      .img {
+        margin-bottom: -7px;
+      }
+
+      &:hover {
+        .img {
+          background-color: rgba($color: #fff, $alpha: 1);
+          transform: scale(1.1);
+          filter: opacity(60%);
+          transition: 0.8s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .ProjectsLayout {
+    padding: 200px 100px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tabletLandscape) {
+  .ProjectsLayout {
+    display: grid;
+    margin: auto;
+    max-width: 80vw;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .ProjectsLayout {
+    max-width: 70vw;
+  }
+}

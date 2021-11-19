@@ -10,7 +10,7 @@ const SingleProject = ({ author, project }) => {
 
   return currProject ? (
     <Layout title={project.slug.current} author={author}>
-      <IndividualProject images={currProject.images} project={project} page="slug" />
+      <IndividualProject images={currProject.images} project={project} />
     </Layout>
   ) : null;
 };
