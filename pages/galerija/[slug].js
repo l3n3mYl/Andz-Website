@@ -6,7 +6,7 @@ import { getAuthorInfo, getSlugProject } from "../../lib/api";
 const SingleProject = ({ author, project }) => {
   let currProject;
 
-  if (project) currProject = project;
+  if (project) currProject = project
 
   return currProject ? (
     <Layout title={project.slug.current} author={author}>

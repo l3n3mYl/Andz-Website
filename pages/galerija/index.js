@@ -20,9 +20,10 @@ const Galerija = ({ author, projects }) => {
   return (
     <Layout title="Galerija" author={author}>
       <div className={styles.projectsGrid}>
-        {projects.map((project, i) => {
+        {projects.map((project) => {
+          let id = project._id
           return (
-            <Link href={`/galerija/${project.slug.current}`} passHref={true} key={i}>
+            <Link href={`/galerija/${project.slug.current}`} passHref={true} key={id}>
               <div className={styles.singleProject}>
                 <div className={styles.imageHover}>
                   <div className={styles.projectImg}>
