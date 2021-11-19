@@ -1,9 +1,16 @@
 import React from 'react'
+import { client } from '../../lib/sanity'
 import classNames from 'classnames'
-import AnyImage from '../HandleImages/Image'
 import styles from './styles/IndividualProjectGrid.module.scss'
 import BlockContent from '../BlockContentHandler';
 import { string, array } from 'prop-types'
+import { useNextSanityImage } from 'next-sanity-image'
+import NextImage from 'next/image'
+
+const SanityImage = ({ image, alt, ...other }) => {
+  const imageProps = useNextSanityImage(client, image)
+  return <NextImage {...imageProps} alt={alt} {...other} />
+}
 
 const ProjectsGrid = ({ images, project, page, className }) => {
 
@@ -22,7 +29,7 @@ const ProjectsGrid = ({ images, project, page, className }) => {
         blocks={body}
       />
       {images.map((image, i) => {
-        return <AnyImage image={image} key={`#${page}+${i}`} alt=''/>
+        return <SanityImage image={image} key={`#${page}+${i}`} alt=''/>
       })}
     </div>
   )

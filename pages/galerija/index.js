@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Layout from '../../components/Layout'
 import imageUrlBuilder from '@sanity/image-url'
 import styles from '../../styles/css/galerija.module.css'
@@ -18,20 +19,22 @@ const Galerija = ({ author, projects }) => {
 
   return (
     <Layout title="Galerija" author={author}>
-        <div className={styles.projectsGrid}>
+      <div className={styles.projectsGrid}>
         {projects.map((project, i) => {
           return (
-            <div onClick={() => router.push({pathname: `/galerija/${project.slug.current}`})} className={styles.singleProject} key={i}>
-              <div className={styles.imageHover}>
-                <div className={styles.projectImg}>
-                  <img src={imgUrlBuilder.image(project.mainImage).width(1920).height(1080)} alt="" />
+            <Link href={`/galerija/${project.slug.current}`} passHref={true} key={i}>
+              <div className={styles.singleProject}>
+                <div className={styles.imageHover}>
+                  <div className={styles.projectImg}>
+                    <img src={imgUrlBuilder.image(project.mainImage).width(1920).height(1080)} alt="" />
+                  </div>
+                </div>
+                <div className={styles.projectInfo}>
+                  <h2>{project.title}</h2>
+                  <h3>{project.subtitle}</h3>
                 </div>
               </div>
-              <div className={styles.projectInfo}>
-                <h2>{project.title}</h2>
-                <h3>{project.subtitle}</h3>
-              </div>
-            </div>
+            </Link>
           )
         })}
       </div>
