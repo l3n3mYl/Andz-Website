@@ -1,35 +1,56 @@
 .content {
-  width: 50%;
-  height: fit-content;
-  margin: auto;
-  cursor: default;
-  padding: 100px 0;
+  padding-top: 150px;
+  .images {
+    max-width: 100%;
+    height: auto;
+
+    &:last-child {
+      margin-bottom: 100px;
+    }
+  }
 
   .title {
-      font-size: 3em;
-      text-align: center;
-      padding-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
   }
-
-  // .body {
-  //     margin: 50px 0 100px 0;
-  // }
 
   .subtitle {
-      font-size: 1.2em;
-      text-align: center;
-      padding-bottom: 50px;
-      color: darkgrey;
-  }
-
-  .singleImage {
-      padding-bottom: 20px;
+    font-size: 1em;
+    text-align: center;
+    padding: 20px 0 40px 0;
+    color: darkgrey;
   }
 }
 
-// @media screen and (max-width: 1400px) {
-//   .content {
-//       width: 100%;
-//       padding: 150px 0 !important;
-//   }
-// }
+@media screen and (min-width: $breakpoint-tablet) {
+  .content {
+    .images {
+      margin: auto;
+      max-width: 50em;
+    }
+
+    .title {
+      font-size: 2.5em;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .content {
+    .images {
+      max-width: 60em;
+    }
+
+    .title {
+      font-size: 3em;
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+    }
+  }
+}

@@ -5,7 +5,7 @@ import styles from './styles/BlockContent.module.scss'
 import SanityBlockContent from '@sanity/block-content-to-react'
 
 const BlockContent = ({ blocks, className, ...others }) => (
-  <div className={classNames(styles.content, className)}>
+  <div className={classNames(styles.Content, className)}>
     <SanityBlockContent
       blocks={blocks}
       {...client.config()}
