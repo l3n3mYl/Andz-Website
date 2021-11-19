@@ -1,36 +1,35 @@
 import React from 'react'
 import Link from 'next/link'
 import { array } from 'prop-types'
+import classNames from 'classnames'
 import AnyImage from '../ImageHandler/index'
-import styles from './styles/ProjectsGrid.module.scss'
+import styles from './styles/ProjectsLayout.module.scss'
 
-function ProjectsGrid({ projects, className, ...others }) {
+function ProjectsLayout({ projects, className }) {
   return (
-    <div className={styles.ProjectsGrid}>
+    <div className={classNames(styles.ProjectsLayout, className)}>
       {projects.map((project) => {
         let id = project._id
         return (
-          <Link href={`/galerija/${project.slug.current}`} passHref={true} key={id}>
-            <div className={styles.imageDiv}>
-              <div className={styles.imageHover}>
-                <div className={styles.projectImg}>
-                  <AnyImage image={project.mainImage} alt="" />
-                </div>
-              </div>
-              <div className={styles.projectInfo}>
-                <h2>{project.title}</h2>
-                <h3>{project.subtitle}</h3>
-              </div>
+          <div className={styles.projectDiv} key={id}>
+            <div className={styles.imageHover}>
+            <Link href={`/galerija/${project.slug.current}`} passHref={true}>
+              <AnyImage className={styles.img} image={project.mainImage} alt="" />
+            </Link>
             </div>
-          </Link>
+            <div className={styles.projectInfo}>
+              <h2>{project.title}</h2>
+              <h3>{project.subtitle}</h3>
+            </div>
+          </div>
         )
       })}
     </div>
   )
 }
 
-ProjectsGrid.propTypes = {
+ProjectsLayout.propTypes = {
   projects: array.isRequired,
 }
 
-export default ProjectsGrid
+export default ProjectsLayout
