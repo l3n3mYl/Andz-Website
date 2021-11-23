@@ -1,6 +1,7 @@
 .ProjectsLayout {
   padding: 150px 0 100px 0;
   cursor: default;
+  min-height: 100vh;
 
   .projectDiv {
     padding-bottom: 50px;
@@ -24,10 +25,6 @@
     .imageHover {
       overflow: hidden;
       cursor: pointer;
-
-      .img {
-        margin-bottom: -7px;
-      }
 
       &:hover {
         .img {

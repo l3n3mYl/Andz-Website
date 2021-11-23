@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import imageUrlBuilder from '@sanity/image-url'
-import styles from '../styles/css/main.module.css'
+import styles from '../styles/scss/main.module.scss'
 import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
 import { getAuthorInfo, getImageCarousel, getAllProjects } from '../lib/api'
 

@@ -124,8 +124,8 @@
     padding: 100px;
 
     .imageHover {
-        overflow: hidden;
-        cursor: pointer;
+          overflow: hidden;
+          cursor: pointer;
         &:hover {
             img {
                 background-color: rgba($color: #fff, $alpha: 1);

@@ -5,6 +5,14 @@ import classNames from 'classnames'
 import AnyImage from '../ImageHandler/index'
 import styles from './styles/ProjectsLayout.module.scss'
 
+const CustomComp = React.forwardRef(function CustomComp(props, ref) {
+  return (
+    <a ref={ref} >
+      <AnyImage className={styles.img} src={props.props.mainImage} alt="" />
+    </a>
+  )
+})
+
 function ProjectsLayout({ projects, className }) {
   return (
     <div className={classNames(styles.ProjectsLayout, className)}>
@@ -13,9 +21,9 @@ function ProjectsLayout({ projects, className }) {
         return (
           <div className={styles.projectDiv} key={id}>
             <div className={styles.imageHover}>
-            <Link href={`/galerija/${project.slug.current}`} passHref={true}>
-              <AnyImage className={styles.img} image={project.mainImage} alt="" />
-            </Link>
+              <Link href={`/galerija/${project.slug.current}`} passHref={true}>
+                <CustomComp props={project} />
+              </Link>
             </div>
             <div className={styles.projectInfo}>
               <h2>{project.title}</h2>
