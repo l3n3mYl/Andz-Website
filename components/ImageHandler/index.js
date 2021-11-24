@@ -4,9 +4,18 @@ import { useNextSanityImage } from 'next-sanity-image'
 import classNames from 'classnames'
 import NextImage from 'next/image'
 import React from 'react'
+import imageUrlBuilder from '@sanity/image-url'
 import ResponsiveMedia from '../ResponsiveMediaHandler/index'
+import { PROJECT_ID, PROJECT_DATASET } from '../../lib/constants'
 
 import styles from './styles/ImageHandler.module.scss'
+
+
+
+const imgUrlBuilder = imageUrlBuilder({
+  projectId: PROJECT_ID,
+  dataset: PROJECT_DATASET
+})
 
 const SanityImage = ({ image, alt, ...other }) => {
   const imageProps = useNextSanityImage(client, image)
@@ -20,10 +29,17 @@ const StaticImage = ({ image, alt, ...other }) => {
 /**
  * Component to handle all types images with ratio support
  */
-const Image = ({ image, ratio, alt, className, src, ...other }) => {
+const Image = ({ image, ratio, alt, className, width, height, src, ...other }) => {
   if (!image && !src) return null
   let imageEl
+
   if (src) {
+    if(typeof src == 'object') 
+      src = imgUrlBuilder
+        .image(src)
+        .width(width ? width : 1920)
+        .height(height ? height : 1080)
+
     imageEl = <img src={src} alt={alt} {...other} loading="lazy" />
   } else if (typeof image === 'string') {
     imageEl = <StaticImage image={image} alt={alt} {...other} />
@@ -48,10 +64,12 @@ const Image = ({ image, ratio, alt, className, src, ...other }) => {
 }
 
 Image.propTypes = {
-  image: oneOfType([string, object]).isRequired,
+  image: oneOfType([string, object]),
   ratio: number,
+  width: number,
+  height: number,
   alt: string,
-  src: string
+  src: oneOfType([string, object])
 }
 
 export default React.memo(Image)
