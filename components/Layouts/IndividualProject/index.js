@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
 import styles from './styles/IndividualProjectGrid.module.scss'
-import BlockContent from '../BlockContentHandler';
+import BlockContent from '../../Handlers/BlockContentHandler';
 import { string, array } from 'prop-types'
-import AnyImage from '../ImageHandler/index'
+import AnyImage from '../../Handlers/ImageHandler/index'
 
 const SingleProject = ({ images, project, className }) => {
 

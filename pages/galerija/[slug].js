@@ -1,5 +1,5 @@
 import { getClient } from "../../lib/sanity";
-import IndividualProject from "../../components/IndividualProject";
+import IndividualProject from "../../components/Layouts/IndividualProject";
 import Layout from "../../components/Layout";
 import { getAuthorInfo, getSlugProject } from "../../lib/api";
 

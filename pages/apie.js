@@ -1,8 +1,8 @@
 import Layout from '../components/Layout'
 import { getAuthorInfo } from '../lib/api'
 import styles from '../styles/scss/apie.module.scss'
-import Image from '../components/ImageHandler/index'
-import BlockContent from '../components/BlockContentHandler/index'
+import AnyImage from '../components/Handlers/ImageHandler/index'
+import BlockContent from '../components/Handlers/BlockContentHandler/index'
 
 const Apie = ({ author }) => {
   const { bio, image } = author
@@ -10,7 +10,7 @@ const Apie = ({ author }) => {
   return (
     <Layout title="Apie" author={author}>
       <div className={styles.Apie}>
-        <Image className={styles.authorImg} image={image} alt='' />
+        <AnyImage className={styles.authorImg} image={image} alt='' />
         <BlockContent blocks={bio} className={styles.authorBio} />
       </div>
     </Layout>

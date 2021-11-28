@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import BackgroundIconAnim from '../components/Animations/BackgroundIconAnim/index'
-import ErrorMessage from '../components/ErrorMessage/index'
+import ErrorMessage from '../components/Abstract/ErrorMessage/index'
 
 const Custom404 = () => {
 

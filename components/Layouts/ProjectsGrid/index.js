@@ -2,18 +2,23 @@ import React from 'react'
 import Link from 'next/link'
 import { array } from 'prop-types'
 import classNames from 'classnames'
-import AnyImage from '../ImageHandler/index'
+import AnyImage from '../../Handlers/ImageHandler/index'
 import styles from './styles/ProjectsLayout.module.scss'
 
 const CustomComp = React.forwardRef(function CustomComp(props, ref) {
+
+  const { slug, mainImage } = props.props
+
   return (
-    <a ref={ref} >
-      <AnyImage className={styles.img} src={props.props.mainImage} alt="" />
-    </a>
+    <Link href={`/galerija/${slug.current}`}>
+      <a ref={ref} >
+        <AnyImage className={styles.img} src={mainImage} alt="" />
+      </a>
+    </Link>
   )
 })
 
-function ProjectsLayout({ projects, className }) {
+const ProjectsLayout = ({ projects, className }) => {
   return (
     <div className={classNames(styles.ProjectsLayout, className)}>
       {projects.map((project) => {
@@ -21,9 +26,7 @@ function ProjectsLayout({ projects, className }) {
         return (
           <div className={styles.projectDiv} key={id}>
             <div className={styles.imageHover}>
-              <Link href={`/galerija/${project.slug.current}`} passHref={true}>
-                <CustomComp props={project} />
-              </Link>
+              <CustomComp props={project} />
             </div>
             <div className={styles.projectInfo}>
               <h2>{project.title}</h2>

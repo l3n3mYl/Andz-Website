@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout'
 import { getAuthorInfo, getAllProjects } from '../../lib/api'
 
-import ProjectsGrid from '../../components/ProjectsGrid'
+import ProjectsGrid from '../../components/Layouts/ProjectsGrid'
 
 const Galerija = ({ author, projects }) => {
 
