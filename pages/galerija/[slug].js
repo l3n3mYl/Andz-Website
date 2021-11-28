@@ -1,5 +1,5 @@
 import { getClient } from "../../lib/sanity";
-import IndividualProject from "../../components/Layouts/IndividualProject";
+import ProjectCard from "../../components/Layouts/ProjectCard";
 import Layout from "../../components/Layout";
 import { getAuthorInfo, getSlugProject } from "../../lib/api";
 
@@ -10,7 +10,7 @@ const SingleProject = ({ author, project }) => {
 
   return currProject ? (
     <Layout title={project.slug.current} author={author}>
-      <IndividualProject images={currProject.images} project={project} />
+      <ProjectCard images={currProject.images} project={project} />
     </Layout>
   ) : null;
 };

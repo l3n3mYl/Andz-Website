@@ -5,8 +5,10 @@ import classNames from 'classnames'
 import AnyImage from '../../Handlers/ImageHandler/index'
 import styles from './styles/ProjectsLayout.module.scss'
 
+/*
+ * Wrap Link el to fix ref error
+*/
 const CustomComp = React.forwardRef(function CustomComp(props, ref) {
-
   const { slug, mainImage } = props.props
 
   return (
@@ -24,11 +26,11 @@ const ProjectsLayout = ({ projects, className }) => {
       {projects.map((project) => {
         let id = project._id
         return (
-          <div className={styles.projectDiv} key={id}>
+          <div className={styles.Wrapper} key={id}>
             <div className={styles.imageHover}>
               <CustomComp props={project} />
             </div>
-            <div className={styles.projectInfo}>
+            <div className={styles.info}>
               <h2>{project.title}</h2>
               <h3>{project.subtitle}</h3>
             </div>

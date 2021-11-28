@@ -3,7 +3,7 @@ import styles from './styles/BackroundIconAnim.module.scss'
 
 const BackgroundIconAnim = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.BackIconAnim}>
         <div className={styles.row}>
           <div>
             <i>&copy;</i>
@@ -854,7 +854,7 @@ const BackgroundIconAnim = () => {
               <i>&#x2708;</i>
           </div> 
       </div>
-      </section>
+    </section>
   )
 }
 

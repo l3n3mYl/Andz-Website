@@ -1,11 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './styles/IndividualProjectGrid.module.scss'
+import styles from './styles/ProjectCard.module.scss'
 import BlockContent from '../../Handlers/BlockContentHandler';
 import { string, array } from 'prop-types'
 import AnyImage from '../../Handlers/ImageHandler/index'
 
-const SingleProject = ({ images, project, className }) => {
+const ProjectCard = ({ images, project, className }) => {
 
   const { 
     title,
@@ -25,10 +25,10 @@ const SingleProject = ({ images, project, className }) => {
   )
 }
 
-SingleProject.propTypes = {
+ProjectCard.propTypes = {
   images: array.isRequired,
   title: string,
   subtitle: string,
 }
 
-export default SingleProject
+export default ProjectCard
