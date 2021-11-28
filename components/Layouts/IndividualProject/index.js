@@ -17,10 +17,7 @@ const SingleProject = ({ images, project, className }) => {
     <div className={classNames(styles.content, className)}>
       <h1 className={styles.title}>{title}</h1>
       <h2 className={styles.subtitle}>{subtitle}</h2>
-      <BlockContent
-        className={styles.body}
-        blocks={body}
-      />
+      {body && <BlockContent className={styles.body} blocks={body} />}
       {images.map((image) => {
         return <AnyImage image={image} key={image._key} className={styles.images} alt=''/>
       })}
