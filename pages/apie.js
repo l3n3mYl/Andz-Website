@@ -5,11 +5,11 @@ import Image from '../components/ImageHandler/index'
 import BlockContent from '../components/BlockContentHandler/index'
 
 const Apie = ({ author }) => {
-  const { bio, image } = author[0]
+  const { bio, image } = author
 
   return (
     <Layout title="Apie" author={author}>
-      <div className={styles.authorInfo}>
+      <div className={styles.Apie}>
         <Image className={styles.authorImg} image={image} alt='' />
         <BlockContent blocks={bio} className={styles.authorBio} />
       </div>

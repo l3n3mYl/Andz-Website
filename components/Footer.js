@@ -11,29 +11,29 @@ const Footer = ({ author }) => {
     */
     const facebook = (e) => {
         e.preventDefault()
-        window.location.assign(author[0].facebook)
+        window.location.assign(author.facebook)
     }
 
     const instagram = (e) => {
         e.preventDefault()
-        window.location.assign(author[0].instagram)
+        window.location.assign(author.instagram)
     }
 
     const twitter = (e) => {
         e.preventDefault()
-        window.location.assign(author[0].twitter)
+        window.location.assign(author.twitter)
     }
 
     const snapchat = (e) => {
         e.preventDefault()
-        window.location.assign(author[0].snapchat)
+        window.location.assign(author.snapchat)
     }
 
     if( author !== 'none' ){
         return (
             <div className={styles.mainDiv}>
                 <div className={styles.socMedia}>
-                    <h3>Follow {author[0].hashtag}</h3>
+                    <h3>Follow {author.hashtag}</h3>
                     <div className={styles.links}>
                         <i onClick={facebook}><FontAwesomeIcon icon={faFacebook}/></i>
                         <i onClick={instagram}><FontAwesomeIcon icon={faInstagram}/></i>
@@ -42,8 +42,8 @@ const Footer = ({ author }) => {
                     </div>
                 </div>
                 <div className={styles.info}>
-                    <p>{author[0].street}, <br />{author[0].city}, <br />{author[0].country}</p>
-                    <p>+{author[0].phone}</p>
+                    <p>{author.street}, <br />{author.city}, <br />{author.country}</p>
+                    <p>+{author.phone}</p>
                 </div>
             </div>
         )

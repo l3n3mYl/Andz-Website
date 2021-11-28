@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   name: 'author',
   title: 'Author',
@@ -63,6 +64,7 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      validation: Rule => Rule.required(),
       options: {
         source: 'name',
         maxLength: 96
