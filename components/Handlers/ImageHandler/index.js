@@ -6,7 +6,7 @@ import NextImage from 'next/image'
 import React from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import ResponsiveMedia from '../ResponsiveMediaHandler/index'
-import { PROJECT_ID, PROJECT_DATASET } from '../../lib/constants'
+import { PROJECT_ID, PROJECT_DATASET } from '../../../lib/constants'
 
 import styles from './styles/ImageHandler.module.scss'
 

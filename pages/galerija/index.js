@@ -1,13 +1,13 @@
 import Layout from '../../components/Layout'
 import { getAuthorInfo, getAllProjects } from '../../lib/api'
 
-import ProjectsGrid from '../../components/ProjectsGrid'
+import ProjectsLayout from '../../components/Layouts/ProjectsLayout'
 
 const Galerija = ({ author, projects }) => {
 
   return (
     <Layout title="Galerija" author={author}>
-      <ProjectsGrid 
+      <ProjectsLayout 
         projects={projects}
       />
     </Layout>

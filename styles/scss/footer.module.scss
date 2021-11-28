@@ -54,18 +54,13 @@
 
 @media screen and (max-width: 450px) {
     .mainDiv {
-        // grid-template-columns: 1fr 1fr;
 
         .socMedia {
-            // grid-column: 1;
-            // margin-left: 20px;
             font-size: 1.2em;
         }
 
         .info {
             font-size: 0.8em;
-            // grid-column: 2;
-            // margin-right: 20px;
         }
     }
 }

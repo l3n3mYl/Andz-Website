@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import client from "../../lib/sanity";
+import client from "../../../lib/sanity";
 import styles from './styles/BlockContent.module.scss'
 import SanityBlockContent from '@sanity/block-content-to-react'
 

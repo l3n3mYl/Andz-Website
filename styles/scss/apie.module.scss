@@ -1,9 +1,8 @@
-.authorInfo {
+.Apie {
   padding-top: 100px;
   min-height: 100vh;
-  font-family: 'Rubik';
-  .authorBio {
 
+  .authorBio {
     h1 {
       font-weight: bold;
       font-size: 2em;
@@ -28,7 +27,7 @@
 }
 
 @media screen and (min-width: $breakpoint-mobileLandscape) {
-  .authorInfo {
+  .Apie {
     padding: 100px 10%;
   }
 }
@@ -45,7 +44,7 @@
 }
 
 @media screen and (min-width: $breakpoint-tabletLandscape) {
-  .authorInfo {
+  .Apie {
     all: unset;
     min-height: 100vh;
     margin: auto;
@@ -64,15 +63,16 @@
 }
 
 @media screen and (min-width: $breakpoint-desktop) {
-  .authorInfo {
+  .Apie {
     max-width: $breakpoint-full;
-  }
-  .authorImg {
-    width: 25vw !important;
-  }
-  .authorBio {
-    margin: 0;
-    padding: 0;
-    width: 30vw !important;
+
+    .authorImg {
+      width: 25vw;
+    }
+    .authorBio {
+      margin: 0;
+      padding: 0;
+      width: 30vw;
+    }
   }
 }

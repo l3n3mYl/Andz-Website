@@ -4,7 +4,7 @@ import styles from '../styles/css/kontaktai.module.css'
 
 const Kontaktai = ({ author }) => {
 
-  const emailField = `https://formsubmit.co/${author[0].email}`
+  const emailField = `https://formsubmit.co/${author.email}`
 
   return (
     <Layout author={author} title='Kontaktai'>

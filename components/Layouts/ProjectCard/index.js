@@ -1,11 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './styles/IndividualProjectGrid.module.scss'
-import BlockContent from '../BlockContentHandler';
+import styles from './styles/ProjectCard.module.scss'
+import BlockContent from '../../Handlers/BlockContentHandler';
 import { string, array } from 'prop-types'
-import AnyImage from '../ImageHandler/index'
+import AnyImage from '../../Handlers/ImageHandler/index'
 
-const SingleProject = ({ images, project, className }) => {
+const ProjectCard = ({ images, project, className }) => {
 
   const { 
     title,
@@ -17,10 +17,7 @@ const SingleProject = ({ images, project, className }) => {
     <div className={classNames(styles.content, className)}>
       <h1 className={styles.title}>{title}</h1>
       <h2 className={styles.subtitle}>{subtitle}</h2>
-      <BlockContent
-        className={styles.body}
-        blocks={body}
-      />
+      {body && <BlockContent className={styles.body} blocks={body} />}
       {images.map((image) => {
         return <AnyImage image={image} key={image._key} className={styles.images} alt=''/>
       })}
@@ -28,10 +25,10 @@ const SingleProject = ({ images, project, className }) => {
   )
 }
 
-SingleProject.propTypes = {
+ProjectCard.propTypes = {
   images: array.isRequired,
   title: string,
   subtitle: string,
 }
 
-export default SingleProject
+export default ProjectCard
