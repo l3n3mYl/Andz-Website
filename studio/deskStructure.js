@@ -12,6 +12,13 @@ export default () =>
             .schemaType('author')
             .documentId('author')
         ),
-        S.divider(),
-      ...S.documentTypeListItems().filter(item => !['author'].includes(item.getId()))
+      S.listItem()
+          .title('Carousel')
+          .child(
+            S.document()
+              .schemaType('slides')
+              .documentId('slides')
+          ),
+      S.divider(),
+      ...S.documentTypeListItems().filter(item => !['author', 'slides'].includes(item.getId()))
     ])

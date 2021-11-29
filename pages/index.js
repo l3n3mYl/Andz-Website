@@ -8,7 +8,7 @@ import { PROJECT_ID, PROJECT_DATASET } from '../lib/constants'
 import { getAuthorInfo, getImageCarousel, getAllProjects } from '../lib/api'
 
 export default function Index({ carouselItems, author, projects }) {
-  const carousel = carouselItems[0].images
+  const carousel = carouselItems.images
 
   const imgUrlBuilder = imageUrlBuilder({
     projectId: PROJECT_ID,

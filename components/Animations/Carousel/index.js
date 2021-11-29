@@ -20,15 +20,21 @@ const Carousel = ({ images, className }) => {
 
   return (
     <div>
-      <Swiper className={classNames(styles.Swiper, className)} centeredSlides={true} autoplay={{
-        "delay": 2500,
-        "disableOnInteraction": false
-      }} pagination={{
-        "dynamicBullets": true
-      }} navigation={true} loop={true}>
+      <Swiper 
+        className={classNames(styles.Swiper, className)}
+        autoplay={{
+          "delay": 3000,
+          "disableOnInteraction": false
+        }}
+        pagination={{
+          "dynamicBullets": true
+        }}
+        navigation={true}
+        loop={true}
+      >
         {images.map((pic, i) => {
           return <SwiperSlide className={styles.swiperSlide} key={pic._key}>
-            <AnyImage className={styles.s} src={pic} alt={`CarouselImageNr${i}`} />
+              <AnyImage className={styles.image} image={pic} alt={`CarouselImageNr${i}`} />
             </SwiperSlide>
         })}
       </Swiper>
