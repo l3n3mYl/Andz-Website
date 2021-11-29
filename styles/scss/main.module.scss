@@ -1,5 +1,10 @@
 @use './components/vars' as *;
 
+.swiper {
+  width: 100vw;
+  height: 95vh;
+}
+
 .innerDiv {
     cursor: default;
     margin: 0;
