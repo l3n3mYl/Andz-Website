@@ -1,0 +1,14 @@
+.Swiper {
+  width: 100vw;
+
+  --swiper-navigation-color: rgb(255, 251, 0);
+  --swiper-pagination-color: rgb(255, 251, 0);
+  
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90vh;
+  }
+}

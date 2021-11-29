@@ -12,6 +12,6 @@ export default () =>
             .schemaType('author')
             .documentId('author')
         ),
-        S.divider(),
+      S.divider(),
       ...S.documentTypeListItems().filter(item => !['author'].includes(item.getId()))
     ])

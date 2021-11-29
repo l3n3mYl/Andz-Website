@@ -28,7 +28,6 @@ export default {
         title: 'Images',
         type: 'array',
         of: [{type: 'image',}],
-        validation: Rule => Rule.min(5).max(5)
       },
       {
         name: 'publishedAt',
