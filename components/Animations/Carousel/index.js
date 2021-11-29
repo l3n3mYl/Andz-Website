@@ -22,6 +22,7 @@ const Carousel = ({ images, className }) => {
     <div>
       <Swiper 
         className={classNames(styles.Swiper, className)}
+        speed={1000}
         autoplay={{
           "delay": 3000,
           "disableOnInteraction": false
