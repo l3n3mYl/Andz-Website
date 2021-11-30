@@ -14,6 +14,8 @@
 
 body {
   background-color: #F2F2F2;
+  max-width: $breakpoint-full;
+  min-height: 100vh;
 }
   
 ::-webkit-scrollbar {
