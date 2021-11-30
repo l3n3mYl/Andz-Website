@@ -35,7 +35,7 @@ const Carousel = ({ images, className }) => {
       >
         {images.map((pic, i) => {
           return <SwiperSlide className={styles.swiperSlide} key={pic._key}>
-              <AnyImage className={styles.image} image={pic} alt={`CarouselImageNr${i}`} />
+              <AnyImage className={styles.image} image={pic} alt={`CarouselImage#${i}`} />
             </SwiperSlide>
         })}
       </Swiper>
