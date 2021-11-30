@@ -1,8 +1,8 @@
 import React from 'react'
-import { object, string } from 'prop-types'
+import { array, string } from 'prop-types'
 import styles from './styles/ServicesLayout.module.scss'
 import classNames from 'classnames'
-import AnyImage from '../../Handlers/ImageHandler/index'
+import ImageHoverAnim from '../../Animations/ImageHoverAnim'
 
 const ServicesLayot = ({ services, className }) => {
 
@@ -10,21 +10,14 @@ const ServicesLayot = ({ services, className }) => {
     <div className={classNames(styles.Services, className)}>
       {services.map((service, i) => {
         return (
-          <div className={styles.singleProject} key={i}>
-            <div className={styles.projectInfo}>
+          <div className={styles.card} key={i}>
               <h2>{service.title}</h2>
-            </div>
-            <div className={styles.imageHover}>
-              <div className={styles.projectImg}>
-                <AnyImage className={styles.img} image={service.image} alt={`Service#${i}`} />
-              </div>
-              <div className={styles.serviceInfo}>
-                  <p>{service.photoAmount} Nuotraukų</p>
-                  <p>{service.hourAmount} h Nuostabiai praleisto laiko</p>
-                  <p>Galimybė matyti savo nuotraukas čia</p>
-                  <p className={styles.price}>{service.price} &euro;</p>
-              </div>
-            </div>
+            <ImageHoverAnim className={styles.image} image={service.image}  >
+              <p>{service.photoAmount} Nuotraukų</p>
+              <p>{service.hourAmount} h Nuostabiai praleisto laiko</p>
+              <p>Galimybė matyti savo nuotraukas čia</p>
+              <h3>{service.price} &euro;</h3>
+            </ImageHoverAnim>
           </div>
         )
       })}
@@ -33,7 +26,7 @@ const ServicesLayot = ({ services, className }) => {
 }
 
 ServicesLayot.propTypes = {
-  services: object.isRequired,
+  services: array.isRequired,
   className: string,
 }
 
