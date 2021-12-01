@@ -16,8 +16,32 @@ body {
   background-color: #F2F2F2;
   max-width: $breakpoint-full;
   min-height: 100vh;
+  overflow-x: hidden;
 }
   
 ::-webkit-scrollbar {
-  width: 0;
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $scrollbarMainColor;
+  border-radius: 100vw;
+  margin-block: 0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scrollbarAccentColor;
+  border: 0.25em solid $scrollbarMainColor;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $scrollbarAccentColor;
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: $scrollbarMainColor $scrollbarAccentColor;
+    scrollbar-width: thin;
+  }
 }
