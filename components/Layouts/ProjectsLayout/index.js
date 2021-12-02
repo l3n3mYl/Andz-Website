@@ -1,24 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import { array } from 'prop-types'
 import classNames from 'classnames'
-import AnyImage from '../../Handlers/ImageHandler/index'
 import styles from './styles/ProjectsLayout.module.scss'
-
-/*
- * Wrap Link el to fix ref error
-*/
-const CustomComp = React.forwardRef(function CustomComp(props, ref) {
-  const { slug, mainImage } = props.props
-
-  return (
-    <Link href={`/galerija/${slug.current}`}>
-      <a ref={ref} >
-        <AnyImage className={styles.img} src={mainImage} alt="" />
-      </a>
-    </Link>
-  )
-})
+import ImageLinkWrapper from '../../Abstract/ImageLinkWrapper'
 
 const ProjectsLayout = ({ projects, className }) => {
   return (
@@ -28,7 +12,10 @@ const ProjectsLayout = ({ projects, className }) => {
         return (
           <div className={styles.Wrapper} key={id}>
             <div className={styles.imageHover}>
-              <CustomComp props={project} />
+              <ImageLinkWrapper 
+                image={project.mainImage} 
+                href={`/galerija/${project.slug.current}`} 
+              />
             </div>
             <div className={styles.info}>
               <h2>{project.title}</h2>

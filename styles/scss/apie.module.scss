@@ -51,12 +51,10 @@
     display: flex;
     justify-content: space-between;
     width: 70%;
+    gap: 20px;
 
     .authorImg {
       margin: 0;
-    }
-    .authorBio {
-      margin-right: 0;
     }
   }
 }

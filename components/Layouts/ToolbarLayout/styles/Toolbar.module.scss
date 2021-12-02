@@ -1,5 +1,3 @@
-@use './components/vars' as *;
-
 .menuToggle:checked ~ nav{
     transform: scale(1, 1);
 
@@ -46,16 +44,18 @@
     }
 }
 
-.header {
+.Header {
     background-color: rgba($color: $elementColor, $alpha: 0.5);
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
 
-    h1 {
-        color: #fff;
-        font-size: 2rem;
+    .smallLogo {
+      width: max-content;
+      margin: auto;
+      margin-bottom: 20px;
+      font-size: 2rem;
     }
 
     nav {
@@ -74,7 +74,7 @@
             padding: 0;
             list-style: none;
 
-            i{
+            .bigLogo{
                 display: none;
             }
 
@@ -116,11 +116,11 @@
 }
 
 @media screen and (max-width: 900px) {
-    .header {
+    .Header {
         .bigLogo {
             padding-left: 30%;
         }
-        h1{
+        .smallLogo {
             padding-top: 20px;
             display: block;
             z-index: 99;
@@ -143,13 +143,14 @@
         display: none;
     }
 
-    .header {
-        position: sticky;
+    .Header {
+        left: 0;
+        right: 0;
         top: 0;
         width: 70%;
         margin: auto;
 
-        h1 {
+        .smallLogo {
             display: none;
         }
 
@@ -161,7 +162,7 @@
                 place-items: center;
                 grid-template-columns: 0.5fr repeat(5, minmax(10px, 1fr)) 0.5fr;
 
-                i {
+                .bigLogo {
                     padding: 10px 0 5px 0;
                     display: block;
                     cursor: pointer;

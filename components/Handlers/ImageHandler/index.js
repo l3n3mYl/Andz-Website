@@ -34,13 +34,14 @@ const Image = ({ image, ratio, alt, className, width, height, src, ...other }) =
   let imageEl
 
   if (src) {
-    if(typeof src == 'object') 
+    if(typeof src == 'object') {
       src = imgUrlBuilder
-        .image(src)
-        .width(width ? width : 1920)
-        .height(height ? height : 1080)
-
-    imageEl = <img src={src} alt={alt} {...other} loading="lazy" />
+      .image(src)
+      .width(width ? width : 1920)
+      .height(height ? height : 1080)
+    }
+      
+    imageEl = <img src={src} alt={alt} width={width ? width : null} height={height ? height : null} {...other} loading="lazy" />
   } else if (typeof image === 'string') {
     imageEl = <StaticImage image={image} alt={alt} {...other} />
   } else if (image.asset) {
