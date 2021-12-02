@@ -1,63 +1,27 @@
-@use './components/vars' as *;
+.Footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  color: $accentColor;
+  padding: 20px;
+  background-color: $elementColor;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 
-.mainDiv {
-    position: relative;
-    bottom: 0;
-    width: 100vw;
-    color: $accentColor;
-    padding-top: 20px;
-    background-color: $elementColor;
-    pointer-events: none;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-
-    .socMedia {
-        grid-column: 2 / span 1;
-        place-self: top start;
-        font-size: 1.5em;
-
-        .links {
-            display: flex;
-            justify-content: space-between;
-            width: inherit;
-            pointer-events: auto;
-            cursor: pointer;
-        }
-    }
-
-    .info {
-        grid-column: 3 / span 1;
-        place-self: top end;
-        margin-bottom: 20px;
-        font-size: 0.8em;
-    }
+  .rightElement {
+    place-self: right;
+  }
+  .leftElement {
+    place-self: left;
+  }
 }
 
-@media screen and (max-width: 799px) {
-    .mainDiv {
-        grid-template-columns: 1fr 1fr;
-
-        .socMedia {
-            grid-column: 1;
-            margin-left: 20px;
-        }
-
-        .info {
-            grid-column: 2;
-            margin-right: 20px;
-        }
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .mainDiv {
-
-        .socMedia {
-            font-size: 1.2em;
-        }
-
-        .info {
-            font-size: 0.8em;
-        }
-    }
+@media screen and (min-width: $breakpoint-tablet) {
+  .leftElement {
+    padding-left: 15vw;
+  }
+  .rightElement {
+    padding-right: 15vw;
+  }
 }

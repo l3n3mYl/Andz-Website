@@ -1,0 +1,23 @@
+.SocMedia {
+  color: $accentColor;
+  max-width: min-content;
+  font-size: calc(1em + 1vmin);
+
+  .links {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > *:hover {
+      cursor: pointer;
+      opacity: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .SocMedia {
+    font-size: 1.2em;
+  }
+}
