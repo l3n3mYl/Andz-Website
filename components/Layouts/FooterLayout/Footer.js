@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../styles/scss/footer.module.scss'
-import SocMedia from './Layouts/SocMedia'
-import AuthorInfo from './Layouts/AuthorInfo'
+import styles from './styles/Footer.module.scss'
+import SocMedia from '../SocMedia'
+import AuthorInfo from '../AuthorInfo'
 
 const Footer = ({ author }) => {
 
