@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Footer from './Layouts/FooterLayout/Footer'
-import Toolbar from './Toolbar'
+import Toolbar from './Layouts/ToolbarLayout/Toolbar'
 
 const Layout = ({ children, title, author }) => {
 

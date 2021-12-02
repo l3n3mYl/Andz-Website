@@ -5,19 +5,20 @@ import styles from './styles/SocMedia.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faTwitter, faSnapchat } from '@fortawesome/free-brands-svg-icons'
 import classNames from 'classnames'
+import ImageLinkWrapper from '../../Abstract/ImageLinkWrapper'
 
 const SocMedia = ({ author, className }) => {
 
   const { facebook, instagram, twitter, snapchat, hashtag } = author
-
+  
   return (
     <div className={classNames(styles.SocMedia, className)}>
       <p>Follow: {hashtag}</p>
       <div className={styles.links}>
-        <Link href={facebook} passHref ><FontAwesomeIcon icon={faFacebook} /></Link>
-        <Link href={instagram} passHref ><FontAwesomeIcon icon={faInstagram} /></Link>
-        <Link href={twitter} passHref ><FontAwesomeIcon icon={faTwitter} /></Link>
-        <Link href={snapchat} passHref ><FontAwesomeIcon icon={faSnapchat} /></Link>
+        <ImageLinkWrapper href={facebook} icon={<FontAwesomeIcon icon={faFacebook} />} />
+        <ImageLinkWrapper href={instagram} icon={<FontAwesomeIcon icon={faInstagram} />} />
+        <ImageLinkWrapper href={twitter} icon={<FontAwesomeIcon icon={faTwitter} />} />
+        <ImageLinkWrapper href={snapchat} icon={<FontAwesomeIcon icon={faSnapchat} />} />
       </div>
     </div>
   )
