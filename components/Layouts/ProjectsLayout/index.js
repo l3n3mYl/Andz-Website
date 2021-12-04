@@ -2,17 +2,20 @@ import React from 'react'
 import { array } from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles/ProjectsLayout.module.scss'
+import ImageHoverAnim from '../../Animations/ImageHoverAnim'
 import ImageLinkWrapper from '../../Abstract/ImageLinkWrapper'
 
 const ProjectsLayout = ({ projects, className }) => {
   return (
     <div className={classNames(styles.ProjectsLayout, className)}>
       {projects.map((project) => {
-        let id = project._id
+        const id = project._id
+
         return (
           <div className={styles.Wrapper} key={id}>
             <div className={styles.imageHover}>
-              <ImageLinkWrapper 
+              <ImageLinkWrapper
+                className={styles.img}
                 image={project.mainImage} 
                 href={`/galerija/${project.slug.current}`} 
               />
