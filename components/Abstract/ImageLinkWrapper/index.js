@@ -11,9 +11,9 @@ const ImageLinkWrapper = ({ image, icon, href, className, width, height }) => {
   const CustomComp = React.forwardRef(function CustomComp(props, ref) {
     return (
       image 
-      ? <Link href={href}>
+      ? <Link href={href} >
           <a ref={ref} >
-            <AnyImage 
+            <AnyImage
               className={className}
               width={width ? width : null}
               height={height ? height : null}
@@ -21,7 +21,7 @@ const ImageLinkWrapper = ({ image, icon, href, className, width, height }) => {
             />
           </a>
         </Link> 
-      : <Link href={href} passHref ><a ref={ref} >{icon}</a></Link>
+      : <Link innerRef={ref} href={href} passHref ><a ref={ref} >{icon}</a></Link>
       )
     })
 

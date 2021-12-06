@@ -10,16 +10,17 @@ import AnyImage from '../../Handlers/ImageHandler/index'
 
 import styles from './styles/Carousel.module.scss'
 
+SwiperCore.use([
+  Navigation, 
+  Pagination,
+  Autoplay
+])
+
 const Carousel = ({ images, className }) => {
 
-  SwiperCore.use([
-    Navigation, 
-    Pagination,
-    Autoplay
-  ])
-
   return (
-    <div>
+    images ? 
+    <>
       <Swiper 
         className={classNames(styles.Swiper, className)}
         speed={1000}
@@ -39,7 +40,8 @@ const Carousel = ({ images, className }) => {
             </SwiperSlide>
         })}
       </Swiper>
-    </div>
+    </>
+    : null
   )
 }
 
