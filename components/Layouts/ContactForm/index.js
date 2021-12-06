@@ -10,15 +10,15 @@ const ContactForm = ({ email }) => {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.inputBox}>
-            <input type="text" name="name" required="required"/>
-            <span className={styles.text}>Vardas</span>
+            <input id='name' type="text" name="name" required="required"/>
+            <label htmlFor='name' className={styles.text}>Vardas:</label>
             <span className={styles.line}></span>
           </div>
         </div>
         <div className={styles.col}>
           <div className={styles.inputBox}>
             <input type="text" name="email" required="required"/>
-            <span className={styles.text}>Email Adresas</span>
+            <label htmlFor='email' className={styles.text}>El. Paštas</label>
             <span className={styles.line}></span>
           </div>
         </div>
@@ -26,8 +26,8 @@ const ContactForm = ({ email }) => {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.inputBox}>
-            <input type="text" name="_subject" required="required"/>
-            <span className={styles.text}>Tema</span>
+            <input id='subject' type="text" name="_subject" required="required"/>
+            <label htmlFor='subject' className={styles.text}>Tema:</label>
             <span className={styles.line}></span>
           </div>
         </div>
@@ -35,8 +35,8 @@ const ContactForm = ({ email }) => {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.inputBox} id={styles.textArea}>
-            <textarea type="text" name="message" required="required"/>
-            <span className={styles.text}>Žinutė</span>
+            <textarea id='textBox' type="text" name="message" required="required"/>
+            <label htmlFor='textBox' className={styles.text}>Žinutė:</label>
             <span className={styles.line}></span>
           </div>
         </div>
