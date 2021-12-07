@@ -8,6 +8,7 @@ const Layout = ({ children, title, author }) => {
       <>
         <Head>
           <title> Andzelika JPG | {title}</title>
+          <link rel="shortcut icon" href="icon.ico" />
         </Head>
         <Toolbar title={title} />
           {children}

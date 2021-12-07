@@ -8,12 +8,10 @@ export default function Index({ carouselItems, author, projects }) {
   const carousel = carouselItems
 
   return (
-    <>
-      <Layout title="Home" author={author} >
-          <Carousel images={carousel} />
-          <ProjectsLayout projects={projects} />
-      </Layout>
-    </>
+    <Layout title="Home" author={author} >
+      <Carousel images={carousel} />
+      <ProjectsLayout projects={projects} />
+    </Layout>
   )
 }
 
