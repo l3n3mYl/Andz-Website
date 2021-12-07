@@ -13,7 +13,7 @@ const Footer = ({ author }) => {
       </div>
     )
   } else {
-    return (<></>)
+    return null
   }
 }
 
