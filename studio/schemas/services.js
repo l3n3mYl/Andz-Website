@@ -2,6 +2,7 @@ export default {
     name: 'services',
     title: 'Services',
     type: 'document',
+    liveEdit: true,
     fields: [
       {
         name: 'title',

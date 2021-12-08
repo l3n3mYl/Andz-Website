@@ -2,6 +2,7 @@ export default {
     name: 'slides',
     title: 'Top Gallery Carousel',
     type: 'document',
+    liveEdit: true,
     fields: [
       {
         name: 'title',
