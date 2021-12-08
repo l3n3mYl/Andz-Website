@@ -3,6 +3,7 @@ export default {
   name: 'author',
   title: 'Author',
   type: 'document',
+  liveEdit: true,
   fields: [
     {
       name: 'name',

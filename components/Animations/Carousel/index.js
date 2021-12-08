@@ -17,10 +17,8 @@ SwiperCore.use([
 ])
 
 const Carousel = ({ images, className }) => {
-
   return (
     images ? 
-    <>
       <Swiper 
         className={classNames(styles.Swiper, className)}
         speed={1000}
@@ -40,7 +38,6 @@ const Carousel = ({ images, className }) => {
             </SwiperSlide>
         })}
       </Swiper>
-    </>
     : null
   )
 }
