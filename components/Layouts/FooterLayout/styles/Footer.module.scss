@@ -10,10 +10,10 @@
   grid-gap: 20px;
 
   .rightElement {
-    place-self: right;
+    justify-self: right;
   }
   .leftElement {
-    place-self: left;
+    justify-self: left;
   }
 }
 
