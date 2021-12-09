@@ -2,7 +2,6 @@ export default {
     name: 'slides',
     title: 'Top Gallery Carousel',
     type: 'document',
-    liveEdit: true,
     fields: [
       {
         name: 'title',
@@ -13,6 +12,7 @@ export default {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
+        validation: Rule => Rule.required(),
         options: {
           source: 'title',
           maxLength: 96,

@@ -2,7 +2,6 @@ export default {
     name: 'project',
     title: 'Project',
     type: 'document',
-    liveEdit: true,
     fields: [
       {
         name: 'title',
