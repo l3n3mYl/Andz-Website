@@ -24,6 +24,7 @@
         width: 2em;
         display: block;
         background-color: #fff;
+        box-shadow: #000 0 0 5px;
         height: 2px;
         width: 2em;
         border-radius: 2px;
@@ -88,6 +89,7 @@
 
                 a {
                     color: #fff;
+                    text-shadow: #000 0 0 10px;
                     position: relative;
                     text-decoration: none;
                     font-size: 1.2rem;
@@ -106,6 +108,7 @@
 
                 .highlight {
                     color: $accentColor;
+                    text-shadow: none;
                     &:before {
                         transform: scale(1, 1);
                     }
@@ -171,11 +174,12 @@
                 li {
                     a {
                         color: #fff;
+                        text-shadow: #000 0 0 3px;
                         font-size: 1.2em;
                         opacity: 1;
                         &:hover {
                             color: $accentColor;
-
+                            text-shadow: none;
                             &::before {
                                 transform: scale(1, 1);
                             }
@@ -222,19 +226,3 @@
 
     }
 }
-
-// @media screen and (max-width: 799px) {
-//     .mainDiv {
-//         grid-template-columns: 1fr 1fr;
-
-//         .socMedia {
-//             grid-column: 1;
-//             margin-left: 20px;
-//         }
-
-//         .info {
-//             grid-column: 2;
-//             margin-right: 20px;
-//         }
-//     }
-// }
