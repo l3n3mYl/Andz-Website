@@ -1,10 +1,24 @@
 import React from 'react'
 import styles from './styles/ContactForm.module.scss'
-import { string } from 'prop-types'
 
-const ContactForm = ({ email }) => {
+const ContactForm = _ => {
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    const formData = {}
+    Array.from(e.currentTarget.elements).forEach(field => {
+      if(!field.name) return
+
+      formData[field.name] = field.value
+    })
+    fetch('/api/mailer', {
+      method: 'post',
+      body: JSON.stringify(formData),
+    })
+  }
+
   return (
-    <form action={email} method='POST' className={styles.ContactForm}>
+    <form method='POST' onSubmit={handleSubmit} className={styles.ContactForm}>
       <input type="hidden" name="_captcha" value="false"/>
       <h2>Susisiekime!</h2>
       <div className={styles.row}>
@@ -26,7 +40,7 @@ const ContactForm = ({ email }) => {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.inputBox}>
-            <input id='subject' type="text" name="_subject" required="required"/>
+            <input id='subject' type="text" name="subject" required="required"/>
             <label htmlFor='subject' className={styles.text}>Tema:</label>
             <span className={styles.line}></span>
           </div>
@@ -50,8 +64,6 @@ const ContactForm = ({ email }) => {
   )
 }
 
-ContactForm.propTypes = {
-  email: string.isRequired,
-}
+ContactForm.propTypes = {}
 
 export default ContactForm
