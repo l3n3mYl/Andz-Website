@@ -1,0 +1,9 @@
+.MessageBox {
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  padding-top: 20vh;
+  background-color: $elementColor;
+
+  font-size: calc(1em + 1vmin);
+}

@@ -3,12 +3,10 @@ import ContactForm from '../components/Layouts/ContactForm'
 import { getAuthorInfo } from '../lib/api'
 
 const Kontaktai = ({ author }) => {
-
-  const email = `https://formsubmit.co/${author.email}`
-
+  
   return (
     <Layout author={author} title='Kontaktai'>
-      <ContactForm email={email} />
+      <ContactForm author={author} />
     </Layout>
   )
 }
