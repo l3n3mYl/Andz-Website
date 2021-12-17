@@ -3,8 +3,11 @@ const mailjet = require ('node-mailjet')
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function(req, res) {
-
+console.log(req.author)
   const { email, name, message, subject } = JSON.parse(req.body)
+  const authorEmail = JSON.parse(req.author.email)
+  const authorName = JSON.parse(req.author.name)
+  
   const htmlMessage = `
     <h3>Begin messsage:</h3><br>
     ----------------------------------------------------------------<br>
@@ -21,13 +24,13 @@ export default async function(req, res) {
       "Messages":[
         {
           "From": {
-            "Email": "asavkinas123@gmail.com",
+            "Email": authorEmail,
             "Name": name
           },
           "To": [
             {
-              "Email": "asavkinas123@gmail.com",
-              "Name": "authorName"
+              "Email": authorEmail,
+              "Name": authorName
             }
           ],
           "Subject": subject,
@@ -37,10 +40,10 @@ export default async function(req, res) {
         }
       ]
     })
-  await request
-    .then(_ => res.status(200).json({ status: 'OK' }))
-    .catch((err) => {
-      res.status(405)
-      console.log(err)
-    })
+  // await request
+  //   .then(_ => res.status(200).json({ status: 'OK' }))
+  //   .catch((err) => {
+  //     res.status(405)
+  //     console.log(err)
+  //   })
 }

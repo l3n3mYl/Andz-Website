@@ -3,13 +3,19 @@
 .ContactForm {
   padding-top: 100px;
   min-height: 100vh;
-    h2 {
-        width: 100%;
-        color: $accentColor;
-        font-size: 36px;
-        text-align: center;
-        margin-bottom: 75px;
-    }
+
+  .error {
+    color: red;
+    padding-top: 10px;
+  }
+
+  h2 {
+      width: 100%;
+      color: $accentColor;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 75px;
+  }
 
     .row {
         position: relative;
