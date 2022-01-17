@@ -17,7 +17,7 @@
 
 body {
   background-color: #F2F2F2;
-  max-width: 120em;
+  max-width: $breakpoint-full;
   min-height: 100vh;
   overflow-x: hidden;
 }
